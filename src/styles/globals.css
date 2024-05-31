@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-muted;
+  }
+
+  body {
+    @apply text-foreground bg-background antialiased flex flex-col min-h-full;
+  }
+
+  html {
+    @apply h-full;
+  }
+}
