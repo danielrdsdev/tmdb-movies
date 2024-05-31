@@ -14,12 +14,13 @@ const config = {
 		},
 		extend: {
 			colors: {
-				background: '#FFF',
+				background: '#fafafa',
 				foreground: {
-					DEFAULT: '#000',
-					secondary: '#FFF'
+					DEFAULT: '#09090b',
+					secondary: '#fafafa'
 				},
-				muted: '#E5E5E5',
+				border: '#27272a',
+				muted: '#71717a',
 				primary: '#0d253f',
 				secondary: '#01b4e4',
 				tertiary: '#90cea1'
