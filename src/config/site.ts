@@ -2,7 +2,7 @@ export const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
 	? `${process.env.NEXT_PUBLIC_VERCEL_URL}`
 	: 'http://localhost:3000'
 
-const baseName = 'TMDB Movies'
+const baseName = process.env.SITE_NAME
 
 export const siteConfig = {
 	metadata: {
