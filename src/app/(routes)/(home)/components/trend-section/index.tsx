@@ -4,7 +4,7 @@ import { fetchTmdb } from '@/lib/fetch-tmdb'
 import type { MovieData } from '@/types/movie'
 
 export const TrendSection = async () => {
-	const params = '/trending/movie/day?language=en-US'
+	const params = '/trending/movie/day?language=pt-BR'
 	const data = await fetchTmdb<MovieData>(params)
 
 	if (!data || !data.results) {

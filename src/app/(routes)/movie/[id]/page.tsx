@@ -11,7 +11,7 @@ type MoviePageProps = {
 }
 
 export default async function MoviePage({ params: { id } }: MoviePageProps) {
-	const params = `/movie/${id}language=pt-BR`
+	const params = `/movie/${id}?language=pt-BR`
 	const data = await fetchTmdb<MovieDetails>(params)
 
 	if (!data) {
@@ -47,7 +47,7 @@ export default async function MoviePage({ params: { id } }: MoviePageProps) {
 					<div className="py-4 space-y-8">
 						<div className="space-y-0.5">
 							<h1 className="font-bold text-2xl">
-								{data.original_title}
+								{data.title}
 
 								<span className="text-muted font-normal ml-1">
 									({format(data.release_date, 'yyyy')})
