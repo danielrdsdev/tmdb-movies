@@ -38,7 +38,7 @@ export const MovieDetailsSection = ({ data }: MovieDetailsSection) => {
 						<h1 className="font-bold text-2xl">
 							{data.title}
 
-							<span className="text-muted font-normal ml-1">
+							<span className="text-muted-foreground font-normal ml-1">
 								({format(data.release_date, 'yyyy')})
 							</span>
 						</h1>

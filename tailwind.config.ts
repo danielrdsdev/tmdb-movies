@@ -20,7 +20,10 @@ const config = {
 					secondary: '#fafafa'
 				},
 				border: '#27272a',
-				muted: '#71717a',
+				muted: {
+					DEFAULT: '#e4e4e7',
+					foreground: '#a1a1aa'
+				},
 				primary: '#0d253f',
 				secondary: '#01b4e4',
 				tertiary: '#90cea1'

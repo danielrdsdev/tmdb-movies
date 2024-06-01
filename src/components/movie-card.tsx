@@ -32,7 +32,7 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
 
 			<div className="mt-1 px-2">
 				<strong className="block text-sm">{movie.title}</strong>
-				<small className="text-muted-foreground text-xs block">
+				<small className="text-muted-foreground-foreground text-xs block">
 					{formatDate(movie.release_date)}
 				</small>
 			</div>
