@@ -3,8 +3,8 @@ import { SectionTitle } from '@/components/section-title'
 import { fetchTmdb } from '@/lib/fetch-tmdb'
 import type { MovieData } from '@/types/movie-trending'
 
-export const MovieTrendingSection = async () => {
-	const params = '/trending/movie/day?language=pt-BR'
+export const PopularMovieSection = async () => {
+	const params = '/movie/popular?language=pt-BR'
 	const data = await fetchTmdb<MovieData>(params)
 
 	if (!data || !data.results) {
@@ -13,7 +13,7 @@ export const MovieTrendingSection = async () => {
 
 	return (
 		<section className="space-y-4 py-8">
-			<SectionTitle>Tendencias</SectionTitle>
+			<SectionTitle>Os mais populares</SectionTitle>
 
 			<div className="overflow-x-auto w-full pb-4 flex gap-4">
 				{data.results.map((movie) => (

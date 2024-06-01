@@ -1,6 +1,6 @@
 import { Skeleton } from '@/components/ui/skeleton'
 
-export const MovieTrendingSkeleton = () => {
+export const TrendingMovieSkeleton = () => {
 	return (
 		<section className="space-y-4 py-8">
 			<Skeleton className="h-5 w-48" />
