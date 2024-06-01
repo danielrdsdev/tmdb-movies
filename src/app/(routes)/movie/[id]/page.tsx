@@ -46,7 +46,7 @@ export async function generateMetadata({
 			description: data.overview,
 			url: `${baseUrl}/${data.id}`,
 			images: {
-				url: data.poster_path,
+				url: `${baseUrl}/${data.poster_path}`,
 				alt: data.title
 			}
 		},
@@ -54,7 +54,7 @@ export async function generateMetadata({
 			title: data.title,
 			description: data.overview,
 			images: {
-				url: data.poster_path,
+				url: `${baseUrl}/${data.poster_path}`,
 				alt: data.title
 			}
 		}
