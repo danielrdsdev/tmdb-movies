@@ -8,7 +8,13 @@ Este projeto é um desafio técnico sobre a utilização da API do **themoviedb.
 
 ## 🖥 Imagens do projeto
 
-![CleanShot 2024-06-01 at 15 33 24@2x](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/013dfcfc-2c5b-459d-ae13-93ecf7d784d0)
+![CleanShot 2024-06-01 at 20 41 46@2x](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/2d20d0d1-feda-4e3b-91f9-5389c2ce9577)
+
+![CleanShot 2024-06-01 at 20 42 01@2x](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/3fd2c53f-fb92-4ba3-b9cc-c7e5ce4f29a2)
+
+![CleanShot 2024-06-01 at 20 43 40@2x](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/f34a2e9f-71ee-4a43-a7e4-87a7cbf93f92)
+
+![CleanShot 2024-06-01 at 20 40 14@2x](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/71824da7-1438-4247-ab17-bbf56eb7ab97)
 
 ## 🚀 Tecnologias Utilizadas
 
