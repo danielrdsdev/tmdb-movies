@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export const HeroSection = () => {
 	return (
-		<section className="py-28 flex justify-center flex-col bg-black gap-8 px-10 relative text-foreground-secondary">
+		<section className="w-full h-[22.875rem] flex justify-center flex-col bg-black gap-8 px-10 relative text-foreground-secondary">
 			<Image
 				src="/banner-hero.webp"
 				alt="Banner hero"
