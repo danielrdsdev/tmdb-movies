@@ -1,13 +1,18 @@
 import { Gauge } from '@/components/ui/gauge'
+import { formatRuntime } from '@/helpers/format-runtime'
 import type { MovieDetails } from '@/types/movie-details'
 import { format } from 'date-fns'
+import { Dot } from 'lucide-react'
 import Image from 'next/image'
 
-type MovieDetailsSection = {
+type MovieDetailsSectionProps = {
 	data: MovieDetails
 }
 
-export const MovieDetailsSection = ({ data }: MovieDetailsSection) => {
+const formatGenres = (genres: { id: number; name: string }[]): string =>
+	genres.map((genre) => genre.name).join(', ')
+
+export const MovieDetailsSection = ({ data }: MovieDetailsSectionProps) => {
 	return (
 		<section className="h-[31.875rem] py-4 relative flex items-center w-full bg-black text-foreground-secondary">
 			<Image
@@ -39,22 +44,24 @@ export const MovieDetailsSection = ({ data }: MovieDetailsSection) => {
 							{data.title}
 
 							<span className="text-muted-foreground font-normal ml-1">
-								({format(data.release_date, 'yyyy')})
+								({format(new Date(data.release_date), 'yyyy')})
 							</span>
 						</h1>
 
-						<div className="flex items-center gap-2">
+						<div className="flex items-center gap-1">
 							<p className="text-xs">
-								{format(data.release_date, 'dd-MM-yyyy')}
+								{format(new Date(data.release_date), 'dd-MM-yyyy')}
 							</p>
+
+							<Dot className="size-5" />
+
 							<div className="flex items-center gap-1">
-								{data.genres.map((item) => (
-									<p key={item.id} className="text-xs">
-										{item.name}
-									</p>
-								))}
+								<p className="text-xs">{formatGenres(data.genres)}</p>
 							</div>
-							<p className="text-xs">{format(data.runtime, 'hh:mm')}</p>
+
+							<Dot className="size-5" />
+
+							<p className="text-xs">{formatRuntime(data.runtime)}</p>
 						</div>
 					</div>
 
