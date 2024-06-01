@@ -1,5 +1,9 @@
 # Consumo de API themoviedb.org (TMDB)
 
+![Project Image - Home page](/project-image.jpg)
+![Project Image - Movie page](/project-image.jpg)
+![Project image  - Skeleton loading](/project-image-skeleton.jpg)
+
 Este projeto é um desafio técnico sobre a utilização da API do **themoviedb.org (TMDB)** para listar filmes e séries populares, implementar filtros de pesquisa e exibir detalhes das produções em uma aplicação **React** utilizando **Next.js**, **TypeScript** e **Tailwind CSS**.
 
 ## 🔗 Projeto Online
