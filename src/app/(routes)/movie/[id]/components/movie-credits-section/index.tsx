@@ -7,7 +7,7 @@ type MovieCreditsSectionProps = {
 
 export const MovieCreditsSection = ({ data }: MovieCreditsSectionProps) => {
 	return (
-		<section className="py-4 space-y-4 container">
+		<section className="space-y-4">
 			<SectionTitle className="px-4">Elenco Principal</SectionTitle>
 
 			<div className="flex items-center gap-3 overflow-x-auto pb-5 px-4">

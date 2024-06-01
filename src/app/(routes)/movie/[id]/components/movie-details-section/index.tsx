@@ -70,6 +70,8 @@ export const MovieDetailsSection = ({ data }: MovieDetailsSection) => {
 						</p>
 					</div>
 
+					<p className="text-sm">{data.tagline}</p>
+
 					<div className="space-y-1">
 						<h2 className="font-medium">Sinopse</h2>
 						<p className="text-sm max-w-3xl">{data.overview}</p>

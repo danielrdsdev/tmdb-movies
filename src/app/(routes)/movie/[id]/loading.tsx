@@ -25,6 +25,8 @@ export default function Loading() {
 							<Skeleton className="w-48 h-4" />
 						</div>
 
+						<Skeleton className="w-1/3 h-4" />
+
 						<div className="space-y-1">
 							<Skeleton className="w-24 h-4" />
 							<Skeleton className="w-full max-w-4xl h-4" />
@@ -34,24 +36,49 @@ export default function Loading() {
 				</div>
 			</section>
 
-			<section className="py-4 space-y-4 container">
-				<Skeleton className="w-48 h-6 px-4" />
+			<section className="container py-4 grid grid-cols-[90%,1fr] items-start">
+				<div className="space-y-4">
+					<Skeleton className="w-48 h-6 px-4" />
 
-				<div className="grid grid-cols-8 gap-3 px-4">
-					{[...Array(8)].map((_, index) => (
-						<div
-							key={`${index + 1}`}
-							className="rounded-lg shadow-lg min-w-[138px] h-[267px]"
-						>
-							<Skeleton className="w-full h-[175px]" />
+					<div className="grid grid-cols-8 gap-3 px-4">
+						{[...Array(8)].map((_, index) => (
+							<div
+								key={`${index + 1}`}
+								className="rounded-lg shadow-lg min-w-[138px] h-[267px]"
+							>
+								<Skeleton className="w-full h-[175px]" />
 
-							<div className="space-y-0.5 p-3">
-								<Skeleton className="w-full h-4" />
+								<div className="space-y-0.5 p-3">
+									<Skeleton className="w-full h-4" />
 
-								<Skeleton className="w-full h-4" />
+									<Skeleton className="w-full h-4" />
+								</div>
 							</div>
-						</div>
-					))}
+						))}
+					</div>
+				</div>
+
+				<div className="flex flex-col gap-8">
+					<div className="space-y-2">
+						<Skeleton className="w-full h-4" />
+						<Skeleton className="w-full h-4" />
+					</div>
+					<div className="space-y-2">
+						<Skeleton className="w-full h-4" />
+						<Skeleton className="w-full h-4" />
+					</div>
+					<div className="space-y-2">
+						<Skeleton className="w-full h-4" />
+						<Skeleton className="w-full h-4" />
+					</div>
+					<div className="space-y-2">
+						<Skeleton className="w-full h-4" />
+						<Skeleton className="w-full h-4" />
+					</div>
+					<div className="space-y-2">
+						<Skeleton className="w-full h-4" />
+						<Skeleton className="w-full h-4" />
+					</div>
 				</div>
 			</section>
 		</>
