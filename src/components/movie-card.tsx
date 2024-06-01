@@ -1,6 +1,7 @@
 import { formatDate } from '@/helpers/format-data'
 import type { Movie } from '@/types/movie'
 import Image from 'next/image'
+import Link from 'next/link'
 
 type MovieCardProps = {
 	movie: Movie
@@ -18,12 +19,16 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
 		return movie.release_date ?? ''
 	}
 	return (
-		<div className="flex flex-col gap-4 min-w-[150px]">
+		<Link
+			href={`/movie/${movie.id}`}
+			className="flex flex-col gap-4 min-w-[150px]"
+		>
 			<div className="w-full h-[225px] relative rounded-lg overflow-hidden">
 				<Image
 					src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
 					alt="Poster movie"
 					fill
+					sizes="150px"
 					quality={80}
 					className="object-cover aspect-auto"
 				/>
@@ -35,6 +40,6 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
 					{formatDate(getDate(movie))}
 				</small>
 			</div>
-		</div>
+		</Link>
 	)
 }

@@ -1,9 +1,11 @@
 import { MovieCard } from '@/components/movie-card'
 import { SectionTitle } from '@/components/section-title'
-import { getMoviesTrend } from './get-trend-movies'
+import { fetchTmdb } from '@/lib/fetch-tmdb'
+import type { MovieData } from '@/types/movie'
 
 export const TrendSection = async () => {
-	const data = await getMoviesTrend()
+	const params = '/trending/all/day?language=en-US'
+	const data = await fetchTmdb<MovieData>(params)
 
 	if (!data || !data.results) {
 		return null
