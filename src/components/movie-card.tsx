@@ -10,13 +10,16 @@ type MovieCardProps = {
 
 export const MovieCard = ({ movie }: MovieCardProps) => {
 	return (
-		<Link href={`/movie/${movie.id}`} className="flex flex-col min-w-[150px]">
-			<div className="w-full h-[225px] relative rounded-lg overflow-hidden">
+		<Link
+			href={`/movie/${movie.id}`}
+			className="flex flex-col min-w-[9.375rem]"
+		>
+			<div className="w-full h-[14.0625rem] relative rounded-lg overflow-hidden">
 				<Image
 					src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
 					alt="Poster movie"
 					fill
-					sizes="150px"
+					sizes="9.375rem"
 					quality={80}
 					className="object-cover aspect-auto"
 				/>

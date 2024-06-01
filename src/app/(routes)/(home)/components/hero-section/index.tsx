@@ -9,7 +9,7 @@ export const HeroSection = () => {
 				src="/banner-hero.webp"
 				alt="Banner hero"
 				fill
-				sizes="(max-width: 768px) 700px, 1280px"
+				sizes="(max-width: 768px) 43.75rem, 80rem"
 				quality={80}
 				priority
 				className="object-cover aspect-auto opacity-50"

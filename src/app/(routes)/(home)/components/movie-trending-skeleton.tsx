@@ -9,7 +9,7 @@ export const MovieTrendingSkeleton = () => {
 				{[...Array(8)].map((_, index) => (
 					<Skeleton
 						key={`${index + 1}`}
-						className="flex flex-col min-w-[150px] h-[250px]"
+						className="flex flex-col min-w-[9.375rem] h-[15.625rem]"
 					/>
 				))}
 			</div>

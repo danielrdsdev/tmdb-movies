@@ -3,9 +3,9 @@ import { Skeleton } from '@/components/ui/skeleton'
 export default function Loading() {
 	return (
 		<>
-			<section className="h-[510px] py-4 relative bg-zinc-400 flex items-center w-full">
+			<section className="h-[31.875rem] py-4 relative bg-zinc-400 flex items-center w-full">
 				<div className="flex gap-8 container">
-					<Skeleton className="w-[300px] h-[450px]" />
+					<Skeleton className="w-[18.75rem] h-[28.125rem]" />
 
 					<div className="py-4 space-y-8 w-full">
 						<div className="space-y-2">
@@ -44,9 +44,9 @@ export default function Loading() {
 						{[...Array(8)].map((_, index) => (
 							<div
 								key={`${index + 1}`}
-								className="rounded-lg shadow-lg min-w-[138px] h-[267px]"
+								className="rounded-lg shadow-lg min-w-[8.625rem] h-[16.6875rem]"
 							>
-								<Skeleton className="w-full h-[175px]" />
+								<Skeleton className="w-full h-[10.9375rem]" />
 
 								<div className="space-y-0.5 p-3">
 									<Skeleton className="w-full h-4" />

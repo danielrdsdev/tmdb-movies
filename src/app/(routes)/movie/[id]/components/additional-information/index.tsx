@@ -16,7 +16,7 @@ export const AdditionalInformation = ({ data }: AdditionalInformationProps) => {
 			/>
 			<InfoCard
 				info_title="Estado"
-				info_content={data.status === 'Released' ? 'Lançado' : ''}
+				info_content={data.status === 'Released' ? 'Lançado' : data.status}
 			/>
 			<InfoCard
 				info_title="Idioma original"

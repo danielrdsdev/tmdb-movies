@@ -6,13 +6,13 @@ type MovieCreditCard = {
 
 export const MovieCreditCard = ({ cast }: MovieCreditCard) => {
 	return (
-		<div className="rounded-lg shadow-lg min-w-[138px] h-[267px] overflow-hidden">
-			<div className="w-full h-[175px] relative">
+		<div className="rounded-lg shadow-lg min-w-[8.625rem] h-[16.6875rem] overflow-hidden">
+			<div className="w-full h-[10.9375rem] relative">
 				<Image
 					src={`https://image.tmdb.org/t/p/w300${cast.profile_path}`}
 					alt="Cast member profile picture"
 					fill
-					sizes="138px"
+					sizes="8.625rem"
 					className="object-cover aspect-square"
 					quality={80}
 				/>

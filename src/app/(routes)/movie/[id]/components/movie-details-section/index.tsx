@@ -9,7 +9,7 @@ type MovieDetailsSection = {
 
 export const MovieDetailsSection = ({ data }: MovieDetailsSection) => {
 	return (
-		<section className="h-[510px] py-4 relative flex items-center w-full bg-black text-foreground-secondary">
+		<section className="h-[31.875rem] py-4 relative flex items-center w-full bg-black text-foreground-secondary">
 			<Image
 				src={`https://image.tmdb.org/t/p/w1280${data.backdrop_path}`}
 				alt="Movie backdrop"
@@ -21,12 +21,12 @@ export const MovieDetailsSection = ({ data }: MovieDetailsSection) => {
 			/>
 
 			<div className="flex gap-8 container z-10">
-				<div className="relative w-[300px] h-[450px] overflow-hidden rounded-lg">
+				<div className="relative w-[18.75rem] h-[28.125rem] overflow-hidden rounded-lg">
 					<Image
 						src={`https://image.tmdb.org/t/p/w300${data.poster_path}`}
 						alt="Movie backdrop"
 						fill
-						sizes="300px"
+						sizes="18.75rem"
 						priority
 						quality={80}
 						className="object-cover aspect-auto"
