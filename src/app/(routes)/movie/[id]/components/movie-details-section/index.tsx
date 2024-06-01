@@ -7,12 +7,16 @@ import Image from 'next/image'
 
 type MovieDetailsSectionProps = {
 	data: MovieDetails
+	crew: CrewMember[]
 }
 
 const formatGenres = (genres: { id: number; name: string }[]): string =>
 	genres.map((genre) => genre.name).join(', ')
 
-export const MovieDetailsSection = ({ data }: MovieDetailsSectionProps) => {
+export const MovieDetailsSection = ({
+	data,
+	crew
+}: MovieDetailsSectionProps) => {
 	return (
 		<section className="h-[31.875rem] py-4 relative flex items-center w-full bg-black text-foreground-secondary">
 			<Image
@@ -22,7 +26,7 @@ export const MovieDetailsSection = ({ data }: MovieDetailsSectionProps) => {
 				sizes="100vw"
 				priority
 				quality={80}
-				className="object-cover aspect-video object-right-top opacity-30"
+				className="object-cover aspect-video object-right-top opacity-25"
 			/>
 
 			<div className="flex gap-8 container z-10">
@@ -77,11 +81,22 @@ export const MovieDetailsSection = ({ data }: MovieDetailsSectionProps) => {
 						</p>
 					</div>
 
-					<p className="text-sm">{data.tagline}</p>
+					<p className="text-sm italic">{data.tagline}</p>
 
 					<div className="space-y-1">
 						<h2 className="font-medium">Sinopse</h2>
-						<p className="text-sm max-w-3xl">{data.overview}</p>
+						<p className="text-sm max-w-5xl">{data.overview}</p>
+					</div>
+
+					<div className="flex items-start gap-16">
+						{crew
+							.filter((item) => item.job === 'Director')
+							.map((item) => (
+								<div key={item.id} className="space-y-0.5">
+									<h3 className="text-sm font-semibold">{item.name}</h3>
+									<p className="text-sm">{item.job}</p>
+								</div>
+							))}
 					</div>
 				</div>
 			</div>

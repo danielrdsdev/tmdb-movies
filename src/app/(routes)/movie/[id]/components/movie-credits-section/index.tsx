@@ -2,7 +2,7 @@ import { SectionTitle } from '@/components/section-title'
 import { MovieCreditCard } from './movie-credit-card'
 
 type MovieCreditsSectionProps = {
-	data: MovieCredit
+	data: CastMember[]
 }
 
 export const MovieCreditsSection = ({ data }: MovieCreditsSectionProps) => {
@@ -16,7 +16,7 @@ export const MovieCreditsSection = ({ data }: MovieCreditsSectionProps) => {
 					maskImage: 'linear-gradient(to left, transparent, #fafafa 10%)'
 				}}
 			>
-				{data.cast.map((cast) => (
+				{data.map((cast) => (
 					<MovieCreditCard key={cast.id} cast={cast} />
 				))}
 			</div>

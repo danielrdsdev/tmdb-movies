@@ -81,10 +81,13 @@ export default async function MoviePage({ params: { id } }: MoviePageProps) {
 
 	return (
 		<>
-			<MovieDetailsSection data={movieDetailsData} />
+			<MovieDetailsSection
+				data={movieDetailsData}
+				crew={movieCreditsData.crew}
+			/>
 
 			<div className="container py-4 grid grid-cols-[90%,1fr] gap-4 items-start">
-				<MovieCreditsSection data={movieCreditsData} />
+				<MovieCreditsSection data={movieCreditsData.cast} />
 				<AdditionalInformation data={movieDetailsData} />
 			</div>
 		</>
