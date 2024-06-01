@@ -7,6 +7,7 @@ Este projeto é um desafio técnico sobre a utilização da API do **themoviedb.
 [Clique para ver o projeto online](https://tmdb-movies-three.vercel.app/)
 
 ## 🖥 Imagens do projeto
+
 ![CleanShot 2024-06-01 at 15 33 24@2x](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/013dfcfc-2c5b-459d-ae13-93ecf7d784d0)
 
 ## 🚀 Tecnologias Utilizadas
