@@ -4,9 +4,9 @@ Este projeto é um desafio técnico sobre a utilização da API do **themoviedb.
 
 ## 🔗 Projeto Online
 
-## 🖥 Imagens do projeto
-
 [Clique para ver o projeto online](https://tmdb-api-example.vercel.app/)
+
+## 🖥 Imagens do projeto
 
 ## 🚀 Tecnologias Utilizadas
 
