@@ -1,3 +1,4 @@
+import { CircleUser } from 'lucide-react'
 import Image from 'next/image'
 
 type MovieCreditCard = {
@@ -7,15 +8,19 @@ type MovieCreditCard = {
 export const MovieCreditCard = ({ cast }: MovieCreditCard) => {
 	return (
 		<div className="rounded-lg shadow-lg min-w-[8.625rem] h-[16.6875rem] overflow-hidden">
-			<div className="w-full h-[10.9375rem] relative">
-				<Image
-					src={`https://image.tmdb.org/t/p/w300${cast.profile_path}`}
-					alt="Cast member profile picture"
-					fill
-					sizes="8.625rem"
-					className="object-cover aspect-square"
-					quality={80}
-				/>
+			<div className="w-full h-[10.9375rem] flex items-center justify-center relative">
+				{cast.profile_path ? (
+					<Image
+						src={`https://image.tmdb.org/t/p/w300${cast.profile_path}`}
+						alt="Cast member profile picture"
+						fill
+						sizes="8.625rem"
+						className="object-cover aspect-square"
+						quality={80}
+					/>
+				) : (
+					<CircleUser className="size-16 text-muted-foreground" />
+				)}
 			</div>
 
 			<div className="space-y-0.5 p-3">
