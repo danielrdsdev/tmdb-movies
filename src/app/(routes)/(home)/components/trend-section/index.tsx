@@ -4,7 +4,7 @@ import { fetchTmdb } from '@/lib/fetch-tmdb'
 import type { MovieData } from '@/types/movie'
 
 export const TrendSection = async () => {
-	const params = '/trending/all/day?language=en-US'
+	const params = '/trending/movie/day?language=en-US'
 	const data = await fetchTmdb<MovieData>(params)
 
 	if (!data || !data.results) {
@@ -12,7 +12,7 @@ export const TrendSection = async () => {
 	}
 
 	return (
-		<section className="space-y-4 py-16">
+		<section className="space-y-4 py-8">
 			<SectionTitle>Tendencias</SectionTitle>
 
 			<div className="overflow-x-auto w-full pb-4 flex gap-4">

@@ -11,6 +11,7 @@ export const HeroSection = () => {
 				fill
 				sizes="(max-width: 768px) 700px, 1280px"
 				quality={100}
+				priority
 				className="object-cover aspect-auto -z-10"
 			/>
 

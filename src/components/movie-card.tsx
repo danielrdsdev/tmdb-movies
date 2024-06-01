@@ -2,6 +2,7 @@ import { formatDate } from '@/helpers/format-data'
 import type { Movie } from '@/types/movie'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Gauge } from './ui/gauge'
 
 type MovieCardProps = {
 	movie: Movie
@@ -19,10 +20,7 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
 		return movie.release_date ?? ''
 	}
 	return (
-		<Link
-			href={`/movie/${movie.id}`}
-			className="flex flex-col gap-4 min-w-[150px]"
-		>
+		<Link href={`/movie/${movie.id}`} className="flex flex-col min-w-[150px]">
 			<div className="w-full h-[225px] relative rounded-lg overflow-hidden">
 				<Image
 					src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -34,7 +32,15 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
 				/>
 			</div>
 
-			<div>
+			<div className="-mt-4 w-fit ml-2">
+				<Gauge
+					size="small"
+					showValue
+					value={Math.round(movie.vote_average * 10)}
+				/>
+			</div>
+
+			<div className="mt-1 px-2">
 				<strong className="block text-sm">{getTitle(movie)}</strong>
 				<small className="text-muted-foreground text-xs block">
 					{formatDate(getDate(movie))}
