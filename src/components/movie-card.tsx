@@ -1,7 +1,7 @@
 import { formatDate } from '@/helpers/format-date'
 import type { Movie } from '@/types/movie-trending'
+import { Link } from 'next-view-transitions'
 import Image from 'next/image'
-import Link from 'next/link'
 import { Gauge } from './ui/gauge'
 
 type MovieCardProps = {

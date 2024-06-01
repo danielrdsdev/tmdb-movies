@@ -2,6 +2,7 @@ import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
 import '@/styles/globals.css'
 import type { Metadata } from 'next'
+import { ViewTransitions } from 'next-view-transitions'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -17,12 +18,14 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="pt-BR">
-			<body className={inter.className}>
-				<Header />
-				<main className="flex-1">{children}</main>
-				<Footer />
-			</body>
-		</html>
+		<ViewTransitions>
+			<html lang="pt-BR">
+				<body className={inter.className}>
+					<Header />
+					<main className="flex-1 pb-8">{children}</main>
+					<Footer />
+				</body>
+			</html>
+		</ViewTransitions>
 	)
 }

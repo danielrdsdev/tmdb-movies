@@ -1,6 +1,6 @@
 import { Logo } from '@/components/icons/logo'
 import { navLinks } from '@/config/nav'
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 import { NavLink } from './nav-link'
 
 export const Header = () => {
