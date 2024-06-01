@@ -1,5 +1,5 @@
-import { formatDate } from '@/helpers/format-data'
-import type { Movie } from '@/types/movie'
+import { formatDate } from '@/helpers/format-date'
+import type { Movie } from '@/types/movie-trending'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Gauge } from './ui/gauge'
@@ -9,16 +9,6 @@ type MovieCardProps = {
 }
 
 export const MovieCard = ({ movie }: MovieCardProps) => {
-	const getTitle = (movie: Movie): string => {
-		if (movie.title) return movie.title
-		if (movie.original_name) return movie.original_name
-		return movie.original_title
-	}
-
-	const getDate = (movie: Movie): string => {
-		if (movie.first_air_date) return movie.first_air_date
-		return movie.release_date ?? ''
-	}
 	return (
 		<Link href={`/movie/${movie.id}`} className="flex flex-col min-w-[150px]">
 			<div className="w-full h-[225px] relative rounded-lg overflow-hidden">
@@ -41,9 +31,9 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
 			</div>
 
 			<div className="mt-1 px-2">
-				<strong className="block text-sm">{getTitle(movie)}</strong>
+				<strong className="block text-sm">{movie.title}</strong>
 				<small className="text-muted-foreground text-xs block">
-					{formatDate(getDate(movie))}
+					{formatDate(movie.release_date)}
 				</small>
 			</div>
 		</Link>

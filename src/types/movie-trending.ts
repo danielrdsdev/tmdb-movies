@@ -1,26 +1,24 @@
-export type Movie = {
+export interface MovieData {
+	page: number
+	results: Movie[]
+	total_pages: number
+	total_results: number
+}
+
+export interface Movie {
 	backdrop_path: string
 	id: number
 	original_title: string
-	original_name: string
 	overview: string
 	poster_path: string
-	media_type: 'movie' | 'tv'
+	media_type: string
 	adult: boolean
-	title?: string
+	title: string
 	original_language: string
 	genre_ids: number[]
 	popularity: number
-	release_date?: string
+	release_date: string
 	video: boolean
 	vote_average: number
 	vote_count: number
-
-	name?: string
-	first_air_date?: string
-	origin_country?: string[]
-}
-
-export type MovieData = {
-	results: Movie[]
 }

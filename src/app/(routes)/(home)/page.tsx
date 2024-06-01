@@ -1,11 +1,11 @@
 import { HeroSection } from './components/hero-section'
-import { TrendSection } from './components/trend-section'
+import { MovieTrendingSection } from './components/movie-trending-section'
 
 export default function HomePage() {
 	return (
 		<div className="container">
 			<HeroSection />
-			<TrendSection />
+			<MovieTrendingSection />
 		</div>
 	)
 }
