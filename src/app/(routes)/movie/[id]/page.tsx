@@ -45,6 +45,7 @@ export async function generateMetadata({
 			title: data.title,
 			description: data.overview,
 			url: `${baseUrl}/${data.id}`,
+			siteName: 'TMDB Movies',
 			images: {
 				url: `https://image.tmdb.org/t/p/w1280${data.backdrop_path}`,
 				alt: data.title
