@@ -24,7 +24,7 @@ export const HeroSection = () => {
 			<div className="flex items-center relative">
 				<Input
 					className="w-full"
-					placeholder="Pesquisar por um filme, uma serie televisiva, uma pessoa..."
+					placeholder="Pesquisar por um filme ou uma serie televisiva..."
 				/>
 				<Button className="rounded-full absolute right-0 bg-gradient-to-r from-tertiary to-secondary font-semibold hover:text-foreground transition-colors">
 					Search
