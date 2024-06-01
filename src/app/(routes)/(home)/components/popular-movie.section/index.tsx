@@ -15,7 +15,12 @@ export const PopularMovieSection = async () => {
 		<section className="space-y-4 py-8">
 			<SectionTitle>Os mais populares</SectionTitle>
 
-			<div className="overflow-x-auto w-full pb-4 flex gap-4">
+			<div
+				className="overflow-x-auto w-full pb-4 flex gap-4"
+				style={{
+					maskImage: 'linear-gradient(to left, transparent, #fafafa 10%)'
+				}}
+			>
 				{data.results.map((movie) => (
 					<MovieCard key={movie.id} movie={movie} />
 				))}
