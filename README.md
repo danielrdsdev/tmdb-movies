@@ -4,7 +4,7 @@ Este projeto é um desafio técnico sobre a utilização da API do **themoviedb.
 
 ## 🔗 Projeto Online
 
-[Clique para ver o projeto online](https://tmdb-api-example.vercel.app/)
+[Clique para ver o projeto online](https://tmdb-movies-three.vercel.app/)
 
 ## 🖥 Imagens do projeto
 
@@ -48,7 +48,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/danielrdsdev/tmdb-api.git
+$ git clone https://github.com/danielrdsdev/pilar-challenge.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd tmdb-api
