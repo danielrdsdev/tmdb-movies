@@ -51,7 +51,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 $ git clone https://github.com/danielrdsdev/pilar-challenge.git
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd tmdb-api
+$ cd pilar-challenge
 
 # Instale as dependências
 $ npm install
