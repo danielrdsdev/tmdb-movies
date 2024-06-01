@@ -5,7 +5,7 @@ import { NavLink } from './nav-link'
 
 export const Header = () => {
 	return (
-		<header className="h-16 bg-primary text-foreground-secondary">
+		<header className="h-16 sticky top-0 bg-primary text-foreground-secondary z-50">
 			<div className="container flex items-center gap-6">
 				<Link href="/">
 					<Logo className="w-28 h-16" />

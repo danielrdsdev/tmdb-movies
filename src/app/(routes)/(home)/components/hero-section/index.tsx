@@ -10,7 +10,7 @@ export const HeroSection = () => {
 				alt="Banner hero"
 				fill
 				sizes="(max-width: 768px) 700px, 1280px"
-				quality={100}
+				quality={80}
 				priority
 				className="object-cover aspect-auto -z-10"
 			/>
