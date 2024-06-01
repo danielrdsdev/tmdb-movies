@@ -16,7 +16,7 @@ type MoviePageProps = {
 
 export async function generateStaticParams() {
 	const movieParams =
-		'/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc'
+		'/discover/movie?include_adult=false&include_video=false&language=pt-BR&sort_by=popularity.desc'
 	const data = await fetchTmdb<MovieData>(movieParams)
 
 	if (!data) {
