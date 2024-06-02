@@ -16,7 +16,7 @@ const formSchema = z.object({
 export const Search = ({
 	setOpen
 }: {
-	setOpen: (open: boolean) => void
+	setOpen?: (open: boolean) => void
 }) => {
 	const searchParams = useSearchParams()
 	const { replace } = useRouter()
@@ -38,7 +38,9 @@ export const Search = ({
 		}
 		replace(`/search?${params.toString()}`)
 
-		setOpen(false)
+		if (setOpen) {
+			setOpen(false)
+		}
 	}
 
 	return (
