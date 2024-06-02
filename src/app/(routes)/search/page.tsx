@@ -1,6 +1,7 @@
 import { MovieCard } from '@/components/movie-card'
 import { Pagination } from '@/components/pagination'
 import { Search } from '@/components/search'
+import { SearchSkeleton } from '@/components/search-skeleton'
 import { SectionTitle } from '@/components/section-title'
 import { fetchTmdb } from '@/lib/fetch-tmdb'
 import type { MovieData } from '@/types/movie-trending'
@@ -25,7 +26,7 @@ export default async function SearchPage({
 
 	return (
 		<section className="space-y-8 py-8 container">
-			<Suspense fallback={null}>
+			<Suspense fallback={<SearchSkeleton />}>
 				<Search />
 			</Suspense>
 
