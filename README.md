@@ -8,16 +8,12 @@ Este projeto é um desafio técnico sobre a utilização da API do **themoviedb.
 
 ## 🖥 Imagens do projeto
 
-![HomePage](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/2d20d0d1-feda-4e3b-91f9-5389c2ce9577)
-
-![MoviePage](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/3fd2c53f-fb92-4ba3-b9cc-c7e5ce4f29a2)
-
-![MoviesPage](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/523d434f-80ce-4677-9fcb-3451164fa01d)
-
-![SearchPage](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/d5d2d8d3-4cb8-4429-96f5-1d299540de79)
-
+![HomePage](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/778960c9-e82d-40d0-92a8-a2a05f438456)
+![MoviePage](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/876f2802-6e7c-47bc-9895-f17bb88a4561)
+![MoviesPage](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/e310baca-a75f-4344-9063-8732b0ab8760)
+![SearchDialog](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/8696f261-8a80-4bf3-82a8-5548a53fa110)
+![SarchPage](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/161e175e-4588-4793-90ea-85dbd3def853)
 ![MoviePageSkeletonLoading](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/f34a2e9f-71ee-4a43-a7e4-87a7cbf93f92)
-
 ![LightHouseScore](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/25d5baac-55fa-47a5-8389-f8d03de1f3fb)
 
 ## 🚀 Tecnologias Utilizadas
