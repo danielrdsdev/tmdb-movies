@@ -18,24 +18,31 @@ export const MovieDetailsSection = ({
 	crew
 }: MovieDetailsSectionProps) => {
 	return (
-		<section className="h-[31.875rem] py-4 relative flex items-center w-full bg-black text-foreground-secondary">
-			<Image
-				src={`https://image.tmdb.org/t/p/w1280${data.backdrop_path}`}
-				alt="Movie backdrop"
-				fill
-				sizes="100vw"
-				priority
-				quality={80}
-				className="object-cover aspect-video object-right-top opacity-25"
-			/>
+		<section className="lg:h-[31.875rem] py-8 lg:py-4 relative flex items-center w-full bg-black text-foreground-secondary">
+			<div
+				className="h-[18.2rem] lg:h-[31.875rem] w-full absolute top-0"
+				style={{
+					maskImage: 'linear-gradient(to top, transparent, #fafafa 10%)'
+				}}
+			>
+				<Image
+					src={`https://image.tmdb.org/t/p/w1280${data.backdrop_path}`}
+					alt="Movie backdrop"
+					fill
+					sizes="100vw"
+					priority
+					quality={80}
+					className="object-cover aspect-video lg:object-right-top opacity-50 lg:opacity-25"
+				/>
+			</div>
 
-			<div className="flex gap-8 container z-10">
-				<div className="relative w-[18.75rem] h-[28.125rem] overflow-hidden rounded-lg">
+			<div className="flex flex-col lg:flex-row gap-8 container z-10">
+				<div className="relative w-[10rem] h-[14rem] lg:w-[18.75rem] lg:h-[28.125rem] overflow-hidden rounded-lg">
 					<Image
 						src={`https://image.tmdb.org/t/p/w300${data.poster_path}`}
 						alt="Movie backdrop"
 						fill
-						sizes="18.75rem"
+						sizes="(max-width: 768px) 10rem, 18.75rem"
 						priority
 						quality={80}
 						className="object-cover aspect-auto"

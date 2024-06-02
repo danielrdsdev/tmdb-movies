@@ -49,7 +49,7 @@ export const Search = () => {
 							<FormControl>
 								<Input
 									className="w-full flex-1"
-									placeholder="Pesquisar por um filme ou uma serie televisiva..."
+									placeholder="Buscar por um filme"
 									{...field}
 								/>
 							</FormControl>

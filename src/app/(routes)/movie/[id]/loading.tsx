@@ -3,19 +3,19 @@ import { Skeleton } from '@/components/ui/skeleton'
 export default function Loading() {
 	return (
 		<>
-			<section className="h-[31.875rem] py-4 relative bg-zinc-400 flex items-center w-full">
-				<div className="flex gap-8 container">
-					<Skeleton className="w-[18.75rem] h-[28.125rem]" />
+			<section className="lg:h-[31.875rem] py-8 lg:py-4 relative bg-zinc-400 flex items-center w-full">
+				<div className="flex flex-col lg:flex-row gap-8 container z-10">
+					<Skeleton className="w-[10rem] h-[14rem] lg:w-[18.75rem] lg:h-[28.125rem]" />
 
 					<div className="py-4 space-y-8 w-full">
 						<div className="space-y-2">
 							<Skeleton className="w-1/3 h-6" />
 
 							<div className="flex items-center gap-2">
-								<Skeleton className="w-16 h-4" />
-								<Skeleton className="w-16 h-4" />
-								<Skeleton className="w-16 h-4" />
-								<Skeleton className="w-16 h-4" />
+								<Skeleton className="w-12 h-4" />
+								<Skeleton className="w-12 h-4" />
+								<Skeleton className="w-12 h-4" />
+								<Skeleton className="w-12 h-4" />
 							</div>
 						</div>
 
@@ -28,7 +28,7 @@ export default function Loading() {
 						<Skeleton className="w-1/3 h-4" />
 
 						<div className="space-y-1">
-							<Skeleton className="w-24 h-4" />
+							<Skeleton className="w-16 h-4" />
 							<Skeleton className="w-full max-w-4xl h-4" />
 							<Skeleton className="w-full max-w-4xl h-4" />
 						</div>
@@ -36,11 +36,11 @@ export default function Loading() {
 				</div>
 			</section>
 
-			<section className="container py-4 grid grid-cols-[90%,1fr] items-start">
-				<div className="space-y-4">
+			<section className="container py-4 flex flex-col gap-8 lg:grid lg:grid-cols-[90%,1fr] lg:gap-4 items-start">
+				<div className="space-y-4 w-full">
 					<Skeleton className="w-48 h-6 px-4" />
 
-					<div className="grid grid-cols-8 gap-3 px-4">
+					<div className="flex items-center gap-3 overflow-x-auto pb-5 lg:px-4">
 						{[...Array(8)].map((_, index) => (
 							<div
 								key={`${index + 1}`}
@@ -60,24 +60,24 @@ export default function Loading() {
 
 				<div className="flex flex-col gap-8">
 					<div className="space-y-2">
-						<Skeleton className="w-full h-4" />
-						<Skeleton className="w-full h-4" />
+						<Skeleton className="w-32 lg:w-full h-4" />
+						<Skeleton className="w-32 lg:w-full h-4" />
 					</div>
 					<div className="space-y-2">
-						<Skeleton className="w-full h-4" />
-						<Skeleton className="w-full h-4" />
+						<Skeleton className="w-32 lg:w-full h-4" />
+						<Skeleton className="w-32 lg:w-full h-4" />
 					</div>
 					<div className="space-y-2">
-						<Skeleton className="w-full h-4" />
-						<Skeleton className="w-full h-4" />
+						<Skeleton className="w-32 lg:w-full h-4" />
+						<Skeleton className="w-32 lg:w-full h-4" />
 					</div>
 					<div className="space-y-2">
-						<Skeleton className="w-full h-4" />
-						<Skeleton className="w-full h-4" />
+						<Skeleton className="w-32 lg:w-full h-4" />
+						<Skeleton className="w-32 lg:w-full h-4" />
 					</div>
 					<div className="space-y-2">
-						<Skeleton className="w-full h-4" />
-						<Skeleton className="w-full h-4" />
+						<Skeleton className="w-32 lg:w-full h-4" />
+						<Skeleton className="w-32 lg:w-full h-4" />
 					</div>
 				</div>
 			</section>

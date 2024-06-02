@@ -87,7 +87,7 @@ export default async function MoviePage({ params: { id } }: MoviePageProps) {
 				crew={movieCreditsData.crew}
 			/>
 
-			<div className="container py-4 grid grid-cols-[90%,1fr] gap-4 items-start">
+			<div className="container py-4 flex flex-col gap-8 lg:grid lg:grid-cols-[90%,1fr] lg:gap-4 items-start">
 				<MovieCreditsSection data={movieCreditsData.cast} />
 				<AdditionalInformation data={movieDetailsData} />
 			</div>

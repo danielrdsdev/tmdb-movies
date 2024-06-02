@@ -16,8 +16,10 @@ export const HeroSection = () => {
 			/>
 
 			<div className="space-y-0.5 z-10">
-				<h1 className="font-bold tracking-tight text-4xl">Bem-vindo(a).</h1>
-				<p className="text-xl font-semibold">
+				<h1 className="font-bold tracking-tight text-2xl lg:text-4xl">
+					Bem-vindo(a).
+				</h1>
+				<p className="text-lg lg:text-xl font-semibold">
 					Milhões de filmes, séries e pessoas para descobrires. Explora já.
 				</p>
 			</div>
