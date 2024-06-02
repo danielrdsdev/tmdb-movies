@@ -12,7 +12,7 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
 	return (
 		<Link
 			href={`/movie/${movie.id}`}
-			className="rounded-lg shadow-lg border border-muted grid grid-cols-[5.875rem,1fr] gap-4 overflow-hidden"
+			className="rounded-lg shadow-lg border border-muted grid grid-cols-[5.875rem,1fr] pr-4 gap-4 overflow-hidden"
 		>
 			<div className="relative w-[5.875rem] h-[8.8125rem] flex items-center justify-center">
 				{movie.poster_path ? (
