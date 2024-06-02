@@ -1,5 +1,6 @@
 import { Search } from '@/components/search'
 import Image from 'next/image'
+import { Suspense } from 'react'
 
 export const HeroSection = () => {
 	return (
@@ -21,7 +22,9 @@ export const HeroSection = () => {
 				</p>
 			</div>
 
-			<Search />
+			<Suspense fallback={null}>
+				<Search />
+			</Suspense>
 		</section>
 	)
 }

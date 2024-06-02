@@ -4,6 +4,7 @@ import { Search } from '@/components/search'
 import { SectionTitle } from '@/components/section-title'
 import { fetchTmdb } from '@/lib/fetch-tmdb'
 import type { MovieData } from '@/types/movie-trending'
+import { Suspense } from 'react'
 
 export default async function MoviesPage({
 	searchParams
@@ -24,7 +25,9 @@ export default async function MoviesPage({
 
 	return (
 		<section className="space-y-8 py-8 container">
-			<Search />
+			<Suspense fallback={null}>
+				<Search />
+			</Suspense>
 
 			<div className="space-y-6">
 				<SectionTitle>Filmes ({data.total_results})</SectionTitle>
