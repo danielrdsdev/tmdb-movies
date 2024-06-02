@@ -57,7 +57,7 @@ O objetivo principal é demonstrar habilidades nas tecnologias mencionadas, foca
 
 ## 📽️ Video demonstrativo
 
-[Clique para ver o video no YouTube](https://www.youtube.com/embed/IrCjdu7f42E)
+[Clique para ver o video no YouTube](https://www.youtube.com/embed/cpBj1niG3Fs)
 
 ## 📚 Como Utilizar
 
