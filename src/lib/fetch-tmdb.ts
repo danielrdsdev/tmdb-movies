@@ -1,22 +1,15 @@
 export const fetchTmdb = async <T>(params: string): Promise<T | undefined> => {
 	try {
-		const token =
-			'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZjllYzJmNjkzYWE4MzU4N2ExY2Y5MzhjZTMzY2UyZCIsInN1YiI6IjY2NDgyY2VlNzNjZGI0NGJiZjJmNzUxYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IDKLAS0lxxPHZvbLmUsqa9yPcEuk3EfeCs0BSSGMhmw'
-		const options = {
-			next: {
-				revalidate: 60 // 1 minute
-			},
+		const response = await fetch(`${process.env.API_URL}${params}`, {
 			method: 'GET',
 			headers: {
 				accept: 'application/json',
-				Authorization: `Bearer ${token}`
+				Authorization: `Bearer ${process.env.API_TOKEN}`
+			},
+			next: {
+				revalidate: 60 // revalidate cache every 60 seconds
 			}
-		}
-
-		const response = await fetch(
-			`https://api.themoviedb.org/3${params}`,
-			options
-		)
+		})
 
 		if (!response.ok) {
 			throw new Error(
