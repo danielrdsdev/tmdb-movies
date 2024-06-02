@@ -23,6 +23,7 @@ Este projeto é um desafio técnico sobre a utilização da API do **themoviedb.
   - O *Next.js* foi escolhido por seu excelente suporte a renderização no lado do servidor (SSR - Server-Side Rendering) e geração estática (SSG - Static Site Generation). Estas funcionalidades são fundamentais para melhorar a performance e otimização para motores de busca (SEO), o que é um grande diferencial para aplicações que necessitam de um carregamento rápido e eficiente, além de uma excelente indexação em motores de busca. Ideal para projetos que exigem alta performance e um ótimo SEO.
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Vitest](https://vitest.dev/)
 - Suspense API do React para melhorar a experiência do usuário com estados de loading
 
 ## 💻 Sobre o Projeto
