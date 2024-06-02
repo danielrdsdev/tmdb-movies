@@ -1,11 +1,11 @@
 'use client'
+import { Button } from '@/components/ui/button'
+import { Form, FormControl, FormField, FormItem } from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
-import { Button } from './ui/button'
-import { Form, FormControl, FormField, FormItem } from './ui/form'
-import { Input } from './ui/input'
 
 type FormSchema = z.infer<typeof formSchema>
 
@@ -13,7 +13,11 @@ const formSchema = z.object({
 	term: z.string()
 })
 
-export const Search = () => {
+export const Search = ({
+	setOpen
+}: {
+	setOpen: (open: boolean) => void
+}) => {
 	const searchParams = useSearchParams()
 	const { replace } = useRouter()
 
@@ -33,6 +37,8 @@ export const Search = () => {
 			params.delete('query')
 		}
 		replace(`/search?${params.toString()}`)
+
+		setOpen(false)
 	}
 
 	return (

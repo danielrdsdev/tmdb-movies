@@ -1,7 +1,7 @@
 import { MovieCard } from '@/components/movie-card'
 import { Pagination } from '@/components/pagination'
 import { Search } from '@/components/search'
-import { SearchSkeleton } from '@/components/search-skeleton'
+import { SearchSkeleton } from '@/components/search/search-skeleton'
 import { SectionTitle } from '@/components/section-title'
 import { fetchTmdb } from '@/lib/fetch-tmdb'
 import type { MovieData } from '@/types/movie-trending'
