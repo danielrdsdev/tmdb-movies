@@ -4,8 +4,8 @@ import type { MovieData } from '@/types/movie-trending'
 import { MovieCard } from '../movie-card'
 
 export const PopularMovieSection = async () => {
-	const params = '/movie/popular?language=pt-BR'
-	const data = await fetchTmdb<MovieData>(params)
+	const fetchParams = '/movie/popular?language=pt-BR'
+	const data = await fetchTmdb<MovieData>(fetchParams)
 
 	if (!data || !data.results) {
 		return null

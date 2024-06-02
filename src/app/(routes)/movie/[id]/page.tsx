@@ -15,9 +15,9 @@ type MoviePageProps = {
 }
 
 export async function generateStaticParams() {
-	const movieParams =
+	const fetchParams =
 		'/discover/movie?include_adult=false&include_video=false&language=pt-BR&sort_by=popularity.desc'
-	const data = await fetchTmdb<MovieData>(movieParams)
+	const data = await fetchTmdb<MovieData>(fetchParams)
 
 	if (!data) {
 		return notFound()
@@ -31,8 +31,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({
 	params: { id }
 }: MoviePageProps): Promise<Metadata> {
-	const movieDetailsParams = `/movie/${id}?language=pt-BR`
-	const data = await fetchTmdb<MovieDetails>(movieDetailsParams)
+	const fetchParams = `/movie/${id}?language=pt-BR`
+	const data = await fetchTmdb<MovieDetails>(fetchParams)
 
 	if (!data) {
 		return notFound()
@@ -63,11 +63,11 @@ export async function generateMetadata({
 }
 
 export default async function MoviePage({ params: { id } }: MoviePageProps) {
-	const movieDetailsParams = `/movie/${id}?language=pt-BR`
-	const movieCreditsParams = `/movie/${id}/credits?language=en-US`
+	const fetchMovieDetailsParams = `/movie/${id}?language=pt-BR`
+	const fetchMovieCreditsParams = `/movie/${id}/credits?language=en-US`
 	const [movieDetailsData, movieCreditsData] = await Promise.all([
-		fetchTmdb<MovieDetails>(movieDetailsParams),
-		fetchTmdb<MovieCredit>(movieCreditsParams)
+		fetchTmdb<MovieDetails>(fetchMovieDetailsParams),
+		fetchTmdb<MovieCredit>(fetchMovieCreditsParams)
 	])
 
 	if (!movieDetailsData) {
