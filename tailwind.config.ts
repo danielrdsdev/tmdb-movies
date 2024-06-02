@@ -19,7 +19,7 @@ const config = {
 					DEFAULT: '#09090b',
 					secondary: '#fafafa'
 				},
-				border: '#27272a',
+				border: '#a1a1aa',
 				muted: {
 					DEFAULT: '#e4e4e7',
 					foreground: '#a1a1aa'

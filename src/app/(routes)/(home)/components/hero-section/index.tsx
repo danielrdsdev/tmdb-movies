@@ -1,5 +1,4 @@
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
+import { Search } from '@/components/search'
 import Image from 'next/image'
 
 export const HeroSection = () => {
@@ -22,15 +21,7 @@ export const HeroSection = () => {
 				</p>
 			</div>
 
-			<div className="flex items-center relative">
-				<Input
-					className="w-full"
-					placeholder="Pesquisar por um filme ou uma serie televisiva..."
-				/>
-				<Button className="rounded-full absolute right-0 bg-gradient-to-r from-tertiary to-secondary font-semibold hover:text-foreground transition-colors">
-					Search
-				</Button>
-			</div>
+			<Search />
 		</section>
 	)
 }

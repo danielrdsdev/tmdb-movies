@@ -11,9 +11,5 @@ export const navLinks: NavLink[] = [
 	{
 		label: 'Filmes',
 		href: '/movies'
-	},
-	{
-		label: 'Series',
-		href: '/series'
 	}
 ]

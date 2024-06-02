@@ -1,7 +1,7 @@
-import { MovieCard } from '@/components/movie-card'
 import { SectionTitle } from '@/components/section-title'
 import { fetchTmdb } from '@/lib/fetch-tmdb'
 import type { MovieData } from '@/types/movie-trending'
+import { MovieCard } from '../movie-card'
 
 export const TrendingMovieSection = async () => {
 	const params = '/trending/movie/day?language=pt-BR'
