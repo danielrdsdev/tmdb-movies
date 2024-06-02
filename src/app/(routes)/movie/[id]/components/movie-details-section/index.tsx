@@ -92,7 +92,7 @@ export const MovieDetailsSection = ({
 
 					<div className="space-y-1">
 						<h2 className="font-medium">Sinopse</h2>
-						<p className="text-sm max-w-5xl">{data.overview}</p>
+						<p className="text-sm max-w-5xl lg:line-clamp-4">{data.overview}</p>
 					</div>
 
 					<div className="flex items-start gap-16">
