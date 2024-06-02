@@ -35,6 +35,7 @@ export const Pagination = ({
 					onClick={() => navigateToPage(1)}
 					disabled={currentPage === 1}
 				>
+					<span className="sr-only">First page button</span>
 					<ChevronsLeft className="size-4" />
 				</Button>
 
@@ -44,6 +45,7 @@ export const Pagination = ({
 					onClick={() => navigateToPage(currentPage - 1)}
 					disabled={currentPage === 1}
 				>
+					<span className="sr-only">Prev page button</span>
 					<ChevronLeft className="size-4" />
 				</Button>
 
@@ -53,6 +55,7 @@ export const Pagination = ({
 					onClick={() => navigateToPage(currentPage + 1)}
 					disabled={currentPage === totalPages}
 				>
+					<span className="sr-only">Next page button</span>
 					<ChevronRight className="size-4" />
 				</Button>
 
@@ -62,6 +65,7 @@ export const Pagination = ({
 					onClick={() => navigateToPage(totalPages)}
 					disabled={currentPage === totalPages}
 				>
+					<span className="sr-only">Last page button</span>
 					<ChevronsRight className="size-4" />
 				</Button>
 			</div>

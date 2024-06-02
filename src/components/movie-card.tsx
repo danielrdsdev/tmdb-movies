@@ -21,6 +21,7 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
 						alt="Poster movie"
 						fill
 						sizes="5.875rem"
+						priority
 						quality={80}
 						className="object-cover aspect-auto"
 					/>

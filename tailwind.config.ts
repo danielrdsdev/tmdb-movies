@@ -22,7 +22,7 @@ const config = {
 				border: '#a1a1aa',
 				muted: {
 					DEFAULT: '#e4e4e7',
-					foreground: '#a1a1aa'
+					foreground: '#71717a'
 				},
 				primary: '#0d253f',
 				secondary: '#01b4e4',
