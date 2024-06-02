@@ -1,6 +1,6 @@
 import { formatDate } from '@/helpers/format-date'
 import type { Movie } from '@/types/movie-trending'
-import { ImageIcon } from 'lucide-react'
+import { ImageOff } from 'lucide-react'
 import { Link } from 'next-view-transitions'
 import Image from 'next/image'
 
@@ -25,7 +25,7 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
 						className="object-cover aspect-auto"
 					/>
 				) : (
-					<ImageIcon className="size-16 text-muted" />
+					<ImageOff className="size-16 text-muted" />
 				)}
 			</div>
 

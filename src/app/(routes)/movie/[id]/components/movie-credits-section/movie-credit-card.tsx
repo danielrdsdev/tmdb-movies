@@ -1,4 +1,4 @@
-import { CircleUser } from 'lucide-react'
+import { ImageOff } from 'lucide-react'
 import Image from 'next/image'
 
 type MovieCreditCard = {
@@ -19,7 +19,7 @@ export const MovieCreditCard = ({ cast }: MovieCreditCard) => {
 						quality={80}
 					/>
 				) : (
-					<CircleUser className="size-16 text-muted-foreground" />
+					<ImageOff className="size-16 text-muted-foreground" />
 				)}
 			</div>
 
