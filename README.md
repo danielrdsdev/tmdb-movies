@@ -27,6 +27,9 @@ Este projeto é um desafio técnico sobre a utilização da API do **themoviedb.
   - O *Next.js* foi escolhido por seu excelente suporte a renderização no lado do servidor (SSR - Server-Side Rendering) e geração estática (SSG - Static Site Generation). Estas funcionalidades são fundamentais para melhorar a performance e otimização para motores de busca (SEO), o que é um grande diferencial para aplicações que necessitam de um carregamento rápido e eficiente, além de uma excelente indexação em motores de busca. Ideal para projetos que exigem alta performance e um ótimo SEO.
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn/ui](https://ui.shadcn.com/)
+- [Zod](https://zod.dev/)
+- [React Hook Form](https://react-hook-form.com/)
 - [Vitest](https://vitest.dev/)
 - Suspense API do React para melhorar a experiência do usuário com estados de loading
 
@@ -34,17 +37,25 @@ Este projeto é um desafio técnico sobre a utilização da API do **themoviedb.
 
 Este projeto fornece diversas funcionalidades, incluindo:
 
-- Listagem de filmes e séries mais populares
-- Listagem de filmes e séries em alta
+- Listagem de filmes em alta
+- Listagem de filmes mais populares
 - Filtro de pesquisa de produções específicas, salvando o resultado na URL
+- Paginação na página de pesquisa e filmes (20 filmes por página) - salvando o resultado na URL
 - Página de detalhes do filme, contendo informações detalhadas como:
   - Nome
+  - Data de lançamento
+  - Gêneros
+  - Duração
   - Poster
   - Banner
   - Sinopse
   - Classificação geral
-  - Criador
+  - Diretor
   - Elenco
+  - Título original
+  - Idioma original
+  - Orçamento
+  - Bilheteria
 
 O objetivo principal é demonstrar habilidades nas tecnologias mencionadas, focando na integração com APIs externas, implementação de filtros de pesquisa e exibição de detalhes das produções.
 
