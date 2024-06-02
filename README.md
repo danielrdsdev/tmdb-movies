@@ -59,6 +59,10 @@ Este projeto fornece diversas funcionalidades, incluindo:
 
 O objetivo principal é demonstrar habilidades nas tecnologias mencionadas, focando na integração com APIs externas, implementação de filtros de pesquisa e exibição de detalhes das produções.
 
+## 📽️ Video demonstrativo
+
+[Link to Video](https://www.youtube.com/embed/IrCjdu7f42E)
+
 ## 📚 Como Utilizar
 
 ### Pré-requisitos
