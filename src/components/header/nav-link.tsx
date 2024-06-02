@@ -10,7 +10,7 @@ export const NavLink = (props: ComponentProps<typeof Link>) => {
 		<Link
 			{...props}
 			data-active={pathname === props.href}
-			className="text-muted-foreground text-sm font-medium hover:text-foreground-secondary transition-colors data-[active=true]:text-foreground-secondary"
+			className="text-muted-secondary text-sm font-medium hover:text-foreground-secondary transition-colors data-[active=true]:text-foreground-secondary"
 		/>
 	)
 }
