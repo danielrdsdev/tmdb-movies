@@ -7,6 +7,11 @@ import { fetchTmdb } from '@/lib/fetch-tmdb'
 import type { MovieData } from '@/types/movie-trending'
 import { Suspense } from 'react'
 
+export const metadata = {
+	title: 'Filmes',
+	description: 'Encontre os filmes mais populares do momento'
+}
+
 export default async function MoviesPage({
 	searchParams
 }: {
