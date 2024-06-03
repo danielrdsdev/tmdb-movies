@@ -1,4 +1,4 @@
-import { describe, expect, it } from '@jest/globals'
+import { expect } from '@jest/globals'
 import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { Search } from '.'
 

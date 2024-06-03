@@ -20,7 +20,7 @@ export const SearchDialog = () => {
 			<DialogTrigger aria-label="Search icon">
 				<SearchIcon className="size-5" />
 			</DialogTrigger>
-			<DialogContent>
+			<DialogContent data-testid="dialog">
 				<DialogHeader>
 					<DialogTitle>Buscar filmes</DialogTitle>
 					<DialogDescription>

@@ -17,7 +17,7 @@ export default async function MoviesPage({
 }) {
 	const query = searchParams?.query || ''
 	const page = Number(searchParams?.page) || 1
-	const fetchParams = `/discover/movie?include_adult=false&include_video=false&language=pt-BR&sort_by=popularity.desc${query}&page=${page}`
+	const fetchParams = `/discover/movie?include_adult=false&include_video=false&language=pt-BR&sort_by=popularity.desc&query=${query}&page=${page}`
 	const data = await fetchTmdb<MovieData>(fetchParams)
 
 	if (!data || !data.results) {
@@ -27,7 +27,7 @@ export default async function MoviesPage({
 	return (
 		<section className="space-y-8 py-8 container">
 			<Suspense fallback={<SearchSkeleton />}>
-				<Search testId='search-form-movies' />
+				<Search testId="search-form-movies" />
 			</Suspense>
 
 			<div className="space-y-6">
