@@ -27,7 +27,7 @@ export default async function SearchPage({
 	return (
 		<section className="space-y-8 py-8 container">
 			<Suspense fallback={<SearchSkeleton />}>
-				<Search />
+				<Search testId='search-form-page' />
 			</Suspense>
 
 			{data.results.length > 0 ? (

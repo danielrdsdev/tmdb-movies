@@ -27,7 +27,7 @@ export default async function MoviesPage({
 	return (
 		<section className="space-y-8 py-8 container">
 			<Suspense fallback={<SearchSkeleton />}>
-				<Search />
+				<Search testId='search-form-movies' />
 			</Suspense>
 
 			<div className="space-y-6">

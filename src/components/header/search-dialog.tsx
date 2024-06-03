@@ -17,8 +17,7 @@ export const SearchDialog = () => {
 
 	return (
 		<Dialog open={open} onOpenChange={setOpen}>
-			<DialogTrigger>
-				<span className="sr-only">Search icon</span>
+			<DialogTrigger aria-label="Search icon">
 				<SearchIcon className="size-5" />
 			</DialogTrigger>
 			<DialogContent>

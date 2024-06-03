@@ -25,7 +25,7 @@ export const HeroSection = () => {
 			</div>
 
 			<Suspense fallback={null}>
-				<Search />
+				<Search testId='search-form' />
 			</Suspense>
 		</section>
 	)

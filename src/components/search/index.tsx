@@ -1,6 +1,12 @@
 'use client'
 import { Button } from '@/components/ui/button'
-import { Form, FormControl, FormField, FormItem } from '@/components/ui/form'
+import {
+	Form,
+	FormControl,
+	FormField,
+	FormItem,
+	FormMessage
+} from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter, useSearchParams } from 'next/navigation'
@@ -10,13 +16,15 @@ import * as z from 'zod'
 type FormSchema = z.infer<typeof formSchema>
 
 const formSchema = z.object({
-	term: z.string()
+	term: z.string().min(1, 'O termo de busca deve ter pelo menos 1 caractere')
 })
 
 export const Search = ({
-	setOpen
+	setOpen,
+	testId
 }: {
 	setOpen?: (open: boolean) => void
+	testId?: string
 }) => {
 	const searchParams = useSearchParams()
 	const { replace } = useRouter()
@@ -46,8 +54,9 @@ export const Search = ({
 	return (
 		<Form {...form}>
 			<form
+				data-testid={testId}
 				onSubmit={form.handleSubmit(onSubmit)}
-				className="flex items-center relative w-full"
+				className="flex items-center relative w-full pb-4"
 			>
 				<FormField
 					control={form.control}
@@ -61,6 +70,7 @@ export const Search = ({
 									{...field}
 								/>
 							</FormControl>
+							<FormMessage className="absolute -bottom-2" />
 						</FormItem>
 					)}
 				/>

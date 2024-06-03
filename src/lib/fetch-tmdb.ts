@@ -21,7 +21,7 @@ export const fetchTmdb = async <T>(params: string): Promise<T | undefined> => {
 
 		return data
 	} catch (error) {
-		console.error(error)
+		console.error(`Erro ao buscar dados da API: ${error}`)
 
 		return undefined
 	}

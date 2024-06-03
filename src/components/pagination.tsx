@@ -34,8 +34,8 @@ export const Pagination = ({
 					variant="outline"
 					onClick={() => navigateToPage(1)}
 					disabled={currentPage === 1}
+					aria-label='First page'
 				>
-					<span className="sr-only">First page button</span>
 					<ChevronsLeft className="size-4" />
 				</Button>
 
@@ -44,8 +44,8 @@ export const Pagination = ({
 					variant="outline"
 					onClick={() => navigateToPage(currentPage - 1)}
 					disabled={currentPage === 1}
+					aria-label='Prev page'
 				>
-					<span className="sr-only">Prev page button</span>
 					<ChevronLeft className="size-4" />
 				</Button>
 
@@ -54,8 +54,8 @@ export const Pagination = ({
 					variant="outline"
 					onClick={() => navigateToPage(currentPage + 1)}
 					disabled={currentPage === totalPages}
+					aria-label='Next page'
 				>
-					<span className="sr-only">Next page button</span>
 					<ChevronRight className="size-4" />
 				</Button>
 
@@ -64,8 +64,8 @@ export const Pagination = ({
 					variant="outline"
 					onClick={() => navigateToPage(totalPages)}
 					disabled={currentPage === totalPages}
+					aria-label='Last page'
 				>
-					<span className="sr-only">Last page button</span>
 					<ChevronsRight className="size-4" />
 				</Button>
 			</div>
