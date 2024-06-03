@@ -30,7 +30,7 @@ Este projeto é um desafio técnico sobre a utilização da API do **themoviedb.
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - Suspense API do React para melhorar a experiência do usuário com estados de loading
 
-### 🧪 Testes Unitários
+## 🧪 Testes Unitários
 
 Os testes unitários desempenham um papel crucial na garantia da qualidade e confiabilidade da aplicação. Utilizando Jest em conjunto com a React Testing Library, criamos testes para verificar o funcionamento correto de componentes chave. Exemplos de testes realizados incluem:
 
