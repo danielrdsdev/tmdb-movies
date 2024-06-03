@@ -16,6 +16,10 @@ Este projeto é um desafio técnico sobre a utilização da API do **themoviedb.
 ![MoviePageSkeletonLoading](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/f34a2e9f-71ee-4a43-a7e4-87a7cbf93f92)
 ![LightHouseScore](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/25d5baac-55fa-47a5-8389-f8d03de1f3fb)
 
+## 📽️ Video demonstrativo
+
+[Clique para ver o video no YouTube](https://www.youtube.com/embed/cpBj1niG3Fs)
+
 ## 🚀 Tecnologias Utilizadas
 
 - [React](https://reactjs.org/)
@@ -65,10 +69,6 @@ Este projeto fornece diversas funcionalidades, incluindo:
   - Bilheteria
 
 O objetivo principal é demonstrar habilidades nas tecnologias mencionadas, focando na integração com APIs externas, implementação de filtros de pesquisa e exibição de detalhes das produções.
-
-## 📽️ Video demonstrativo
-
-[Clique para ver o video no YouTube](https://www.youtube.com/embed/cpBj1niG3Fs)
 
 ## 📚 Como Utilizar
 
