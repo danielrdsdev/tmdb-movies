@@ -1,8 +1,8 @@
 import { formatDate } from '@/helpers/format-date'
 import type { Movie } from '@/types/movie-trending'
 import { ImageOff } from 'lucide-react'
+import { Link } from 'next-view-transitions'
 import Image from 'next/image'
-import Link from 'next/link'
 
 type MovieCardProps = {
 	movie: Movie
