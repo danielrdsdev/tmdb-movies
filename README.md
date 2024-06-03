@@ -26,7 +26,8 @@ Este projeto é um desafio técnico sobre a utilização da API do **themoviedb.
 - [Shadcn/ui](https://ui.shadcn.com/)
 - [Zod](https://zod.dev/)
 - [React Hook Form](https://react-hook-form.com/)
-- [Vitest](https://vitest.dev/)
+- [Jest](https://jestjs.io/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - Suspense API do React para melhorar a experiência do usuário com estados de loading
 
 ## 💻 Sobre o Projeto
