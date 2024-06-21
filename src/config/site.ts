@@ -40,7 +40,7 @@ export const siteConfig = {
 			type: 'website',
 			images: [
 				{
-					url: `${baseUrl}/static/cover.jpg`,
+					url: `${baseUrl}static/cover.jpg`,
 					alt: 'TMDB Movies',
 					width: 1200,
 					height: 630
@@ -55,7 +55,7 @@ export const siteConfig = {
 			description:
 				'Explore filmes e séries populares. Veja detalhes, avaliações e sinopses de suas produções favoritas usando a API do TMDB.',
 			images: {
-				url: `${baseUrl}/static/cover.jpg`,
+				url: `${baseUrl}static/cover.jpg`,
 				alt: 'TMDB Movies',
 				width: 1200,
 				height: 630
