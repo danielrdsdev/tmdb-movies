@@ -14,18 +14,18 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
 			href={`/movie/${movie.id}`}
 			className="flex flex-col min-w-[9.375rem]"
 		>
-			<div className="w-full h-[14.0625rem] relative rounded-lg overflow-hidden">
+			<div className="relative rounded-lg w-full h-[14.0625rem] overflow-hidden">
 				<Image
 					src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
 					alt="Poster movie"
 					fill
 					sizes="9.375rem"
-					quality={80}
-					className="object-cover aspect-auto"
+					unoptimized
+					className="aspect-auto object-cover"
 				/>
 			</div>
 
-			<div className="-mt-4 w-fit ml-2">
+			<div className="-mt-4 ml-2 w-fit">
 				<Gauge
 					size="small"
 					showValue
@@ -35,7 +35,7 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
 
 			<div className="mt-1 px-2">
 				<strong className="block text-sm">{movie.title}</strong>
-				<small className="text-muted-foreground-foreground text-xs block">
+				<small className="block text-muted-foreground-foreground text-xs">
 					{formatDate(movie.release_date)}
 				</small>
 			</div>

@@ -7,24 +7,24 @@ type MovieCreditCard = {
 
 export const MovieCreditCard = ({ cast }: MovieCreditCard) => {
 	return (
-		<div className="rounded-lg shadow-lg min-w-[8.625rem] h-[16.6875rem] overflow-hidden">
-			<div className="w-full h-[10.9375rem] flex items-center justify-center relative">
+		<div className="shadow-lg rounded-lg min-w-[8.625rem] h-[16.6875rem] overflow-hidden">
+			<div className="relative flex justify-center items-center w-full h-[10.9375rem]">
 				{cast.profile_path ? (
 					<Image
 						src={`https://image.tmdb.org/t/p/w300${cast.profile_path}`}
 						alt="Cast member profile picture"
 						fill
 						sizes="8.625rem"
-						className="object-cover aspect-square"
-						quality={80}
+						className="aspect-square object-cover"
+						unoptimized
 					/>
 				) : (
-					<ImageOff className="size-16 text-muted-foreground" />
+					<ImageOff className="text-muted-foreground size-16" />
 				)}
 			</div>
 
 			<div className="space-y-0.5 p-3">
-				<strong className="text-sm block">{cast.name}</strong>
+				<strong className="block text-sm">{cast.name}</strong>
 				<p className="text-sm">{cast.character}</p>
 			</div>
 		</div>
