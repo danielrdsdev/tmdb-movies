@@ -4,7 +4,7 @@ Este projeto é um desafio técnico sobre a utilização da API do **themoviedb.
 
 ## 🔗 Projeto Online
 
-[Clique para ver o projeto online](https://tmdb-movies-three.vercel.app/)
+[Clique para ver o projeto online](https://tmdb-movies-challenge.vercel.app/)
 
 ## 🖥 Imagens do projeto
 
