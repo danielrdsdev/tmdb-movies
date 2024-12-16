@@ -8,13 +8,13 @@ Este projeto é um desafio técnico sobre a utilização da API do **themoviedb.
 
 ## 🖥 Imagens do projeto
 
-![HomePage](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/778960c9-e82d-40d0-92a8-a2a05f438456)
-![MoviePage](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/876f2802-6e7c-47bc-9895-f17bb88a4561)
-![MoviesPage](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/e310baca-a75f-4344-9063-8732b0ab8760)
-![SearchDialog](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/8696f261-8a80-4bf3-82a8-5548a53fa110)
-![SearchPage](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/161e175e-4588-4793-90ea-85dbd3def853)
-![MoviePageSkeletonLoading](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/f34a2e9f-71ee-4a43-a7e4-87a7cbf93f92)
-![LightHouseScore](https://github.com/danielrdsdev/pilar-challenge/assets/97995126/25d5baac-55fa-47a5-8389-f8d03de1f3fb)
+![HomePage](https://github.com/danielrdsdev/tmdb-movies/assets/97995126/778960c9-e82d-40d0-92a8-a2a05f438456)
+![MoviePage](https://github.com/danielrdsdev/tmdb-movies/assets/97995126/876f2802-6e7c-47bc-9895-f17bb88a4561)
+![MoviesPage](https://github.com/danielrdsdev/tmdb-movies/assets/97995126/e310baca-a75f-4344-9063-8732b0ab8760)
+![SearchDialog](https://github.com/danielrdsdev/tmdb-movies/assets/97995126/8696f261-8a80-4bf3-82a8-5548a53fa110)
+![SearchPage](https://github.com/danielrdsdev/tmdb-movies/assets/97995126/161e175e-4588-4793-90ea-85dbd3def853)
+![MoviePageSkeletonLoading](https://github.com/danielrdsdev/tmdb-movies/assets/97995126/f34a2e9f-71ee-4a43-a7e4-87a7cbf93f92)
+![LightHouseScore](https://github.com/danielrdsdev/tmdb-movies/assets/97995126/25d5baac-55fa-47a5-8389-f8d03de1f3fb)
 
 ## 📽️ Video demonstrativo
 
@@ -83,10 +83,10 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/danielrdsdev/pilar-challenge.git
+$ git clone https://github.com/danielrdsdev/tmdb-movies.git
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd pilar-challenge
+$ cd tmdb-movies
 
 # Instale as dependências
 $ npm install
