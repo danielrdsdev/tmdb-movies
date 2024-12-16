@@ -12,14 +12,10 @@ export const metadata = {
 	description: 'Encontre os filmes mais populares do momento'
 }
 
-export default async function MoviesPage({
-	searchParams
-}: {
-	searchParams?: {
-		query?: string
-		page?: number
-	}
+export default async function MoviesPage(props: {
+	searchParams: Promise<{ query: string; page: string }>
 }) {
+	const searchParams = await props.searchParams
 	const query = searchParams?.query || ''
 	const page = Number(searchParams?.page) || 1
 	const fetchParams = `/discover/movie?include_adult=false&include_video=false&language=pt-BR&sort_by=popularity.desc&query=${query}&page=${page}`

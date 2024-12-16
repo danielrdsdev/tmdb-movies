@@ -7,14 +7,10 @@ import { fetchTmdb } from '@/lib/fetch-tmdb'
 import type { MovieData } from '@/types/movie-trending'
 import { Suspense } from 'react'
 
-export default async function SearchPage({
-	searchParams
-}: {
-	searchParams?: {
-		query?: string
-		page?: number
-	}
+export default async function SearchPage(props: {
+	searchParams: Promise<{ query: string; page: string }>
 }) {
+	const searchParams = await props.searchParams
 	const query = searchParams?.query || ''
 	const page = Number(searchParams?.page) || 1
 	const fetchParams = `/search/movie?query=${query}&include_adult=false&language=pt-BR&page=${page}`
