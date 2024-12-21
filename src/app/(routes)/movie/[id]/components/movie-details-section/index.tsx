@@ -1,4 +1,5 @@
 import { Gauge } from '@/components/ui/gauge'
+import { formatGenres } from '@/helpers/format-genres'
 import { formatRuntime } from '@/helpers/format-runtime'
 import type { CrewMember } from '@/types/movie-credits'
 import type { MovieDetails } from '@/types/movie-details'
@@ -10,9 +11,6 @@ type MovieDetailsSectionProps = {
 	data: MovieDetails
 	crew: CrewMember[]
 }
-
-const formatGenres = (genres: { id: number; name: string }[]): string =>
-	genres.map((genre) => genre.name).join(', ')
 
 export const MovieDetailsSection = ({
 	data,
