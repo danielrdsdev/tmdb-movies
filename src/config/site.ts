@@ -1,15 +1,24 @@
-export const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
-	? `${process.env.NEXT_PUBLIC_VERCEL_URL}`
-	: 'http://localhost:3000'
+import { siteUrl } from '@/utils/env'
+import type { Metadata } from 'next'
 
-export const baseName = 'TMDB Movies'
+type NavLink = {
+	label: string
+	href: string
+}
 
-export const siteConfig = {
+type SiteConfig = {
+	metadata: Metadata
+	navLinks: NavLink[]
+}
+
+const baseName = 'TMDB Movies'
+
+export const siteConfig: SiteConfig = {
 	metadata: {
-		metadataBase: new URL(baseUrl),
+		metadataBase: new URL(siteUrl),
 		title: {
 			template: `%s | ${baseName}`,
-			default: baseName
+			default: baseName,
 		},
 		description:
 			'Explore filmes e séries populares. Veja detalhes, avaliações e sinopses de suas produções favoritas usando a API do TMDB.',
@@ -24,42 +33,24 @@ export const siteConfig = {
 			'Séries Populares',
 			'Detalhes de Filmes',
 			'Detalhes de Séries',
-			'API TMDB'
+			'API TMDB',
 		],
-		authors: [{ name: baseName, url: baseUrl }],
+		authors: [{ name: baseName, url: siteUrl }],
 		creator: baseName,
 		publisher: baseName,
-		canonical: baseUrl,
 		openGraph: {
-			title: 'TMDB Movies: Filmes e Séries Populares',
-			description:
-				'Explore filmes e séries populares. Veja detalhes, avaliações e sinopses de suas produções favoritas usando a API do TMDB.',
-			url: baseUrl,
+			url: siteUrl,
 			siteName: baseName,
-			locale: 'pt_BR',
-			type: 'website',
-			images: [
-				{
-					url: `${baseUrl}static/cover.jpg`,
-					alt: 'TMDB Movies',
-					width: 1200,
-					height: 630
-				}
-			]
 		},
-		twitter: {
-			card: 'summary_large_image',
-			site: '@tmdbmovies',
-			creator: '@tmdbmovies',
-			title: 'TMDB Movies: Filmes e Séries Populares',
-			description:
-				'Explore filmes e séries populares. Veja detalhes, avaliações e sinopses de suas produções favoritas usando a API do TMDB.',
-			images: {
-				url: `${baseUrl}static/cover.jpg`,
-				alt: 'TMDB Movies',
-				width: 1200,
-				height: 630
-			}
-		}
-	}
+	},
+	navLinks: [
+		{
+			label: 'Home',
+			href: '/',
+		},
+		{
+			label: 'Filmes',
+			href: '/movies',
+		},
+	],
 }

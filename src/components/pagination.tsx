@@ -1,29 +1,21 @@
 'use client'
+import { usePagination } from '@/hooks/use-pagination'
 import {
 	ChevronLeft,
 	ChevronRight,
 	ChevronsLeft,
-	ChevronsRight
+	ChevronsRight,
 } from 'lucide-react'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { Button } from './ui/button'
 
 export const Pagination = ({
 	totalPages,
-	currentPage
+	currentPage,
 }: { totalPages: number; currentPage: number }) => {
-	const router = useRouter()
-	const searchParams = useSearchParams()
-	const pathname = usePathname()
-
-	const navigateToPage = (pageNumber: number | string) => {
-		const params = new URLSearchParams(searchParams)
-		params.set('page', pageNumber.toString())
-		router.push(`${pathname}?${params.toString()}`)
-	}
+	const { navigateToPage } = usePagination()
 
 	return (
-		<div className="flex items-center justify-between">
+		<div className="flex justify-between items-center">
 			<p className="text-sm">
 				Pagina {currentPage} de {totalPages}
 			</p>

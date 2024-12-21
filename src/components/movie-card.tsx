@@ -1,5 +1,5 @@
 import { formatDate } from '@/helpers/format-date'
-import type { Movie } from '@/types/movie-trending'
+import type { Movie } from '@/types/movie'
 import { ImageOff } from 'lucide-react'
 import { Link } from 'next-view-transitions'
 import Image from 'next/image'

@@ -1,4 +1,5 @@
 import { SectionTitle } from '@/components/section-title'
+import type { CastMember } from '@/types/movie-credits'
 import { MovieCreditCard } from './movie-credit-card'
 
 type MovieCreditsSectionProps = {
@@ -11,9 +12,9 @@ export const MovieCreditsSection = ({ data }: MovieCreditsSectionProps) => {
 			<SectionTitle className="lg:px-4">Elenco Principal</SectionTitle>
 
 			<div
-				className="flex items-center gap-3 overflow-x-auto pb-5 lg:px-4"
+				className="flex items-center gap-3 lg:px-4 pb-5 overflow-x-auto"
 				style={{
-					maskImage: 'linear-gradient(to left, transparent, #fafafa 10%)'
+					maskImage: 'linear-gradient(to left, transparent, #fafafa 10%)',
 				}}
 			>
 				{data.map((cast) => (

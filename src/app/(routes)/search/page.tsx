@@ -1,11 +1,13 @@
-import { MovieCard } from '@/components/movie-card'
+import { MovieList } from '@/components/movie-list'
 import { Pagination } from '@/components/pagination'
 import { Search } from '@/components/search'
-import { SearchSkeleton } from '@/components/search/search-skeleton'
 import { SectionTitle } from '@/components/section-title'
-import { fetchTmdb } from '@/lib/fetch-tmdb'
-import type { MovieData } from '@/types/movie-trending'
-import { Suspense } from 'react'
+import { getMoviesSearch } from '@/services/get-movies-search'
+
+export const metadata = {
+	title: 'Pesquisar filmes',
+	description: 'Encontre os filmes que deseja',
+}
 
 export default async function SearchPage(props: {
 	searchParams: Promise<{ query: string; page: string }>
@@ -13,38 +15,35 @@ export default async function SearchPage(props: {
 	const searchParams = await props.searchParams
 	const query = searchParams?.query || ''
 	const page = Number(searchParams?.page) || 1
-	const fetchParams = `/search/movie?query=${query}&include_adult=false&language=pt-BR&page=${page}`
-	const data = await fetchTmdb<MovieData>(fetchParams)
-
-	if (!data || !data.results) {
-		return null
-	}
+	const data = await getMoviesSearch(query, page)
 
 	return (
 		<section className="space-y-8 py-8 container">
-			<Suspense fallback={<SearchSkeleton />}>
-				<Search testId="search-form-page" />
-			</Suspense>
+			<Search />
 
-			{data.results.length > 0 ? (
-				<div className="space-y-6">
-					<SectionTitle>
-						Resultados da pesquisa ({data.total_results})
-					</SectionTitle>
+			<div className="space-y-6">
+				<SectionTitle>
+					Resultados da pesquisa ({data?.total_results})
+				</SectionTitle>
 
-					<div className="space-y-6">
-						{data.results.map((movie) => (
-							<MovieCard key={movie.id} movie={movie} />
-						))}
-					</div>
+				<MovieList movies={data?.results} />
 
+				{data && data.results.length <= 0 && (
+					<p className="text-center text-muted-foreground">
+						Nenhum filme encontrado
+					</p>
+				)}
+
+				{!data && (
+					<p className="text-center text-muted-foreground">
+						Erro ao buscar filmes
+					</p>
+				)}
+
+				{data && (
 					<Pagination totalPages={data.total_pages} currentPage={page} />
-				</div>
-			) : (
-				<p className="text-center text-sm">
-					Nenhum resultado encontrado para a pesquisa.
-				</p>
-			)}
+				)}
+			</div>
 		</section>
 	)
 }

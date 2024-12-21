@@ -6,7 +6,7 @@
 	"javascript": {
 		"formatter": {
 			"semicolons": "asNeeded",
-			"trailingComma": "none",
+			"trailingCommas": "es5",
 			"quoteStyle": "single"
 		}
 	},

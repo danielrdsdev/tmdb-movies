@@ -1,12 +1,12 @@
-import { FooterLogo } from '../icons/logo-footer'
+import { FooterLogo } from '../icons'
 
 export const Footer = () => {
 	return (
-		<footer className="py-8 bg-primary">
-			<div className="container flex items-center justify-between">
-				<FooterLogo className="size-20 object-contain" />
+		<footer className="bg-primary py-8">
+			<div className="flex justify-between items-center container">
+				<FooterLogo className="object-contain size-20" />
 
-				<p className="text-sm text-muted-secondary">
+				<p className="text-muted-secondary text-sm">
 					Made with ❤️ by{' '}
 					<span className="font-medium text-foreground-secondary">
 						Daniel Rodrigues

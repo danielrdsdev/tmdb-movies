@@ -1,3 +1,4 @@
+import type { CastMember } from '@/types/movie-credits'
 import { ImageOff } from 'lucide-react'
 import Image from 'next/image'
 

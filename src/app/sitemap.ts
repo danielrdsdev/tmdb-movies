@@ -1,32 +1,29 @@
-import { baseUrl } from '@/config/site'
-import { fetchTmdb } from '@/lib/fetch-tmdb'
-import type { MovieData } from '@/types/movie-trending'
+import { getMovies } from '@/services/get-movies'
+import { siteUrl } from '@/utils/env'
 import type { MetadataRoute } from 'next'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-	const fetchParams =
-		'/discover/movie?include_adult=false&include_video=false&language=pt-BR&sort_by=popularity.desc'
-	const data = await fetchTmdb<MovieData>(fetchParams)
+	const data = await getMovies()
 
 	const movieUrls =
 		data?.results?.map((movie) => ({
-			url: `${baseUrl}movie/${movie.id}`,
+			url: `${siteUrl}/movie/${movie.id}`,
 			lastModified: movie.release_date
 				? new Date(movie.release_date)
-				: new Date()
+				: new Date(),
 		})) || []
 
 	return [
 		{
-			url: baseUrl,
+			url: siteUrl,
 			lastModified: new Date(),
-			priority: 1
+			priority: 1,
 		},
 		{
-			url: `${baseUrl}movies`,
+			url: `${siteUrl}/movies`,
 			lastModified: new Date(),
-			priority: 0.8
+			priority: 0.8,
 		},
-		...movieUrls
+		...movieUrls,
 	]
 }

@@ -1,11 +1,9 @@
 import { SectionTitle } from '@/components/section-title'
-import { fetchTmdb } from '@/lib/fetch-tmdb'
-import type { MovieData } from '@/types/movie-trending'
+import { getPopularMovies } from '@/services/get-popular-movies'
 import { MovieCard } from '../movie-card'
 
-export const PopularMovieSection = async () => {
-	const fetchParams = '/movie/popular?language=pt-BR'
-	const data = await fetchTmdb<MovieData>(fetchParams)
+export const PopularMoviesSection = async () => {
+	const data = await getPopularMovies()
 
 	if (!data || !data.results) {
 		return null
@@ -16,9 +14,9 @@ export const PopularMovieSection = async () => {
 			<SectionTitle>Os mais populares</SectionTitle>
 
 			<div
-				className="overflow-x-auto w-full pb-4 flex gap-4"
+				className="flex gap-4 pb-4 w-full overflow-x-auto"
 				style={{
-					maskImage: 'linear-gradient(to left, transparent, #fafafa 10%)'
+					maskImage: 'linear-gradient(to left, transparent, #fafafa 10%)',
 				}}
 			>
 				{data.results.map((movie) => (

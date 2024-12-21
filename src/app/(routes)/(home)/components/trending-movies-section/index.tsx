@@ -1,11 +1,9 @@
 import { SectionTitle } from '@/components/section-title'
-import { fetchTmdb } from '@/lib/fetch-tmdb'
-import type { MovieData } from '@/types/movie-trending'
+import { getTrendingMovies } from '@/services/get-trending-movies'
 import { MovieCard } from '../movie-card'
 
-export const TrendingMovieSection = async () => {
-	const fetchParams = '/trending/movie/day?language=pt-BR'
-	const data = await fetchTmdb<MovieData>(fetchParams)
+export const TrendingMoviesSection = async () => {
+	const data = await getTrendingMovies()
 
 	if (!data || !data.results) {
 		return null
@@ -16,9 +14,9 @@ export const TrendingMovieSection = async () => {
 			<SectionTitle>Tendencias</SectionTitle>
 
 			<div
-				className="overflow-x-auto w-full pb-4 flex gap-4"
+				className="flex gap-4 pb-4 w-full overflow-x-auto"
 				style={{
-					maskImage: 'linear-gradient(to left, transparent, #fafafa 10%)'
+					maskImage: 'linear-gradient(to left, transparent, #fafafa 10%)',
 				}}
 			>
 				{data.results.map((movie) => (

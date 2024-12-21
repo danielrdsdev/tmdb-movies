@@ -1,11 +1,11 @@
 import { Skeleton } from '@/components/ui/skeleton'
 
-export const TrendingMovieSkeleton = () => {
+export const PopularMoviesSkeleton = () => {
 	return (
 		<section className="space-y-4 py-8">
-			<Skeleton className="h-5 w-48" />
+			<Skeleton className="w-48 h-5" />
 
-			<div className="w-full pb-4 grid grid-cols-8 gap-4">
+			<div className="gap-4 grid grid-cols-8 pb-4 w-full">
 				{[...Array(8)].map((_, index) => (
 					<Skeleton
 						key={`${index + 1}`}

@@ -1,7 +1,7 @@
 export const Gauge = ({
 	value,
 	size = 'small',
-	showValue = true
+	showValue = true,
 }: {
 	value: number
 	size: 'small' | 'medium' | 'large'
@@ -17,18 +17,18 @@ export const Gauge = ({
 		small: {
 			width: '32',
 			height: '32',
-			textSize: 'text-xs'
+			textSize: 'text-xs',
 		},
 		medium: {
 			width: '64',
 			height: '64',
-			textSize: 'text-lg'
+			textSize: 'text-lg',
 		},
 		large: {
 			width: '128',
 			height: '128',
-			textSize: 'text-3xl'
-		}
+			textSize: 'text-3xl',
+		},
 	}
 
 	const getColor = (value: number): string => {
@@ -79,7 +79,7 @@ export const Gauge = ({
 					cy="60"
 					style={{
 						strokeDashoffset: strokeDashoffset,
-						transition: 'stroke-dasharray 1s ease 0s,stroke 1s ease 0s'
+						transition: 'stroke-dasharray 1s ease 0s,stroke 1s ease 0s',
 					}}
 				/>
 			</svg>

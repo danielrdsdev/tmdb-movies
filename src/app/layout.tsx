@@ -3,13 +3,12 @@ import { Header } from '@/components/header'
 import { siteConfig } from '@/config/site'
 import { inter } from '@/styles/fonts'
 import '@/styles/globals.css'
-import type { Metadata } from 'next'
 import { ViewTransitions } from 'next-view-transitions'
 
-export const metadata: Metadata = siteConfig.metadata
+export const metadata = siteConfig.metadata
 
 export default function RootLayout({
-	children
+	children,
 }: Readonly<{
 	children: React.ReactNode
 }>) {

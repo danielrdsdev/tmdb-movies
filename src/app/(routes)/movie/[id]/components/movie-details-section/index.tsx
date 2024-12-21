@@ -1,5 +1,6 @@
 import { Gauge } from '@/components/ui/gauge'
 import { formatRuntime } from '@/helpers/format-runtime'
+import type { CrewMember } from '@/types/movie-credits'
 import type { MovieDetails } from '@/types/movie-details'
 import { format } from 'date-fns'
 import { Dot } from 'lucide-react'
@@ -15,14 +16,14 @@ const formatGenres = (genres: { id: number; name: string }[]): string =>
 
 export const MovieDetailsSection = ({
 	data,
-	crew
+	crew,
 }: MovieDetailsSectionProps) => {
 	return (
 		<section className="relative flex items-center bg-black py-8 lg:py-4 w-full lg:h-[31.875rem] text-foreground-secondary">
 			<div
 				className="top-0 absolute w-full h-[18.2rem] lg:h-[31.875rem]"
 				style={{
-					maskImage: 'linear-gradient(to top, transparent, #fafafa 10%)'
+					maskImage: 'linear-gradient(to top, transparent, #fafafa 10%)',
 				}}
 			>
 				<Image

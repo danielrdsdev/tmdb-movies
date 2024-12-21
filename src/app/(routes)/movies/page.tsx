@@ -1,15 +1,12 @@
-import { MovieCard } from '@/components/movie-card'
+import { MovieList } from '@/components/movie-list'
 import { Pagination } from '@/components/pagination'
 import { Search } from '@/components/search'
-import { SearchSkeleton } from '@/components/search/search-skeleton'
 import { SectionTitle } from '@/components/section-title'
-import { fetchTmdb } from '@/lib/fetch-tmdb'
-import type { MovieData } from '@/types/movie-trending'
-import { Suspense } from 'react'
+import { getMovies } from '@/services/get-movies'
 
 export const metadata = {
 	title: 'Filmes',
-	description: 'Encontre os filmes mais populares do momento'
+	description: 'Encontre os filmes mais populares do momento',
 }
 
 export default async function MoviesPage(props: {
@@ -18,8 +15,7 @@ export default async function MoviesPage(props: {
 	const searchParams = await props.searchParams
 	const query = searchParams?.query || ''
 	const page = Number(searchParams?.page) || 1
-	const fetchParams = `/discover/movie?include_adult=false&include_video=false&language=pt-BR&sort_by=popularity.desc&query=${query}&page=${page}`
-	const data = await fetchTmdb<MovieData>(fetchParams)
+	const data = await getMovies(query, page)
 
 	if (!data || !data.results) {
 		return null
@@ -27,20 +23,28 @@ export default async function MoviesPage(props: {
 
 	return (
 		<section className="space-y-8 py-8 container">
-			<Suspense fallback={<SearchSkeleton />}>
-				<Search testId="search-form-movies" />
-			</Suspense>
+			<Search />
 
 			<div className="space-y-6">
 				<SectionTitle>Filmes ({data.total_results})</SectionTitle>
 
-				<div className="space-y-6">
-					{data.results.map((movie) => (
-						<MovieCard key={movie.id} movie={movie} />
-					))}
-				</div>
+				<MovieList movies={data?.results} />
 
-				<Pagination totalPages={data.total_pages} currentPage={page} />
+				{data && data.results.length <= 0 && (
+					<p className="text-center text-muted-foreground">
+						Nenhum filme encontrado
+					</p>
+				)}
+
+				{!data && (
+					<p className="text-center text-muted-foreground">
+						Erro ao buscar filmes
+					</p>
+				)}
+
+				{data && (
+					<Pagination totalPages={data.total_pages} currentPage={page} />
+				)}
 			</div>
 		</section>
 	)

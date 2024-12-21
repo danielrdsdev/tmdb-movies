@@ -1,5 +1,5 @@
+import { LANGUAGES } from '@/constants/languages'
 import { formatCurrency } from '@/helpers/format-currency'
-import { getLanguageFullName } from '@/helpers/get-language-full-name'
 import type { MovieDetails } from '@/types/movie-details'
 import { InfoCard } from './info-card'
 
@@ -20,7 +20,7 @@ export const AdditionalInformation = ({ data }: AdditionalInformationProps) => {
 			/>
 			<InfoCard
 				info_title="Idioma original"
-				info_content={getLanguageFullName(data.original_language)}
+				info_content={LANGUAGES[data.original_language]}
 			/>
 			<InfoCard
 				info_title="Orçamento"

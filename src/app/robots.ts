@@ -1,4 +1,4 @@
-import { baseUrl } from '@/config/site'
+import { siteUrl } from '@/utils/env'
 import type { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
@@ -6,8 +6,8 @@ export default function robots(): MetadataRoute.Robots {
 		rules: {
 			userAgent: '*',
 			allow: ['/', '/movies'],
-			disallow: []
+			disallow: [],
 		},
-		sitemap: `${baseUrl}sitemap.xml`
+		sitemap: `${siteUrl}/sitemap.xml`,
 	}
 }

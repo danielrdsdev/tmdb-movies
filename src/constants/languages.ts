@@ -1,4 +1,4 @@
-const languageMap: { [key: string]: string } = {
+export const LANGUAGES: Record<string, string> = {
 	en: 'Inglês',
 	es: 'Espanhol',
 	fr: 'Francês',
@@ -48,9 +48,5 @@ const languageMap: { [key: string]: string } = {
 	ca: 'Catalão',
 	is: 'Islandês',
 	ga: 'Irlandês',
-	mk: 'Macedônio'
-}
-
-export function getLanguageFullName(languageCode: string): string {
-	return languageMap[languageCode] || 'Idioma desconhecido'
+	mk: 'Macedônio',
 }

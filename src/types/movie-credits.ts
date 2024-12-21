@@ -1,10 +1,10 @@
-interface MovieCredit {
+export interface MovieCreditData {
 	id: number
 	cast: CastMember[]
 	crew: CrewMember[]
 }
 
-interface CastMember {
+export interface CastMember {
 	adult: boolean
 	gender: number
 	id: number
@@ -19,7 +19,7 @@ interface CastMember {
 	order: number
 }
 
-interface CrewMember {
+export interface CrewMember {
 	adult: boolean
 	gender: number
 	id: number
