@@ -1,4 +1,4 @@
-import { FooterLogo } from '../icons'
+import { FooterLogo } from './icons'
 
 export const Footer = () => {
 	return (
