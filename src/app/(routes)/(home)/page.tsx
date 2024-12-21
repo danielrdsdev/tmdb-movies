@@ -7,7 +7,7 @@ import { TrendingMoviesSkeleton } from './components/trending-movies-section/tre
 
 export default function HomePage() {
 	return (
-		<div className="container">
+		<>
 			<HeroSection />
 
 			<Suspense fallback={<TrendingMoviesSkeleton />}>
@@ -17,6 +17,6 @@ export default function HomePage() {
 			<Suspense fallback={<PopularMoviesSkeleton />}>
 				<PopularMoviesSection />
 			</Suspense>
-		</div>
+		</>
 	)
 }

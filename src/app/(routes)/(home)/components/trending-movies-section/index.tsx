@@ -10,7 +10,7 @@ export const TrendingMoviesSection = async () => {
 	}
 
 	return (
-		<section className="space-y-4 py-8">
+		<section className="space-y-4 py-8 container">
 			<SectionTitle>Tendencias</SectionTitle>
 
 			<div

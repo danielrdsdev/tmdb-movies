@@ -10,7 +10,7 @@ export const PopularMoviesSection = async () => {
 	}
 
 	return (
-		<section className="space-y-4 py-8">
+		<section className="space-y-4 py-8 container">
 			<SectionTitle>Os mais populares</SectionTitle>
 
 			<div
