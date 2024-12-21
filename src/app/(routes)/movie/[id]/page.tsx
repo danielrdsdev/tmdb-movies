@@ -1,4 +1,4 @@
-import { getMovieCredit } from '@/services/get-movie-credit'
+import { getMovieCredits } from '@/services/get-movie-credits'
 import { getMovieDetails } from '@/services/get-movie-details'
 import { getMovies } from '@/services/get-movies'
 import { siteUrl } from '@/utils/env'
@@ -59,7 +59,7 @@ export default async function MoviePage({
 	const { id } = await params
 	const [movieDetailsData, movieCreditsData] = await Promise.all([
 		getMovieDetails(id),
-		getMovieCredit(id),
+		getMovieCredits(id),
 	])
 
 	if (!movieDetailsData || !movieCreditsData) {

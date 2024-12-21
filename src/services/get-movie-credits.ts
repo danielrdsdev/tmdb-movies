@@ -1,11 +1,11 @@
 import { api } from '@/lib/api'
 import type { MovieCreditData } from '@/types/movie-credits'
 
-type MovieCreditResponse = MovieCreditData
+type MovieCreditsResponse = MovieCreditData
 
-export async function getMovieCredit(
+export async function getMovieCredits(
 	id: string
-): Promise<MovieCreditResponse | undefined> {
+): Promise<MovieCreditsResponse | undefined> {
 	try {
 		const data = await api
 			.get(`movie/${id}/credits`, {
@@ -13,7 +13,7 @@ export async function getMovieCredit(
 					language: 'pt-BR',
 				},
 			})
-			.json<MovieCreditResponse>()
+			.json<MovieCreditsResponse>()
 
 		return data
 	} catch (error) {
