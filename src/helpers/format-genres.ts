@@ -3,6 +3,6 @@ type Genres = {
 	name: string
 }
 
-export function formatGenres(genres: Genres[]) {
+export const formatGenres = (genres: Genres[]) => {
 	return genres.map((genre) => genre.name).join(', ')
 }

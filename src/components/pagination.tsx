@@ -12,7 +12,7 @@ export const Pagination = ({
 	totalPages,
 	currentPage,
 }: { totalPages: number; currentPage: number }) => {
-	const { navigateToPage } = usePagination()
+	const { handleNavigate } = usePagination()
 
 	return (
 		<div className="flex justify-between items-center">
@@ -24,7 +24,7 @@ export const Pagination = ({
 				<Button
 					size="icon"
 					variant="outline"
-					onClick={() => navigateToPage(1)}
+					onClick={() => handleNavigate(1)}
 					disabled={currentPage === 1}
 					aria-label="First page"
 				>
@@ -34,7 +34,7 @@ export const Pagination = ({
 				<Button
 					size="icon"
 					variant="outline"
-					onClick={() => navigateToPage(currentPage - 1)}
+					onClick={() => handleNavigate(currentPage - 1)}
 					disabled={currentPage === 1}
 					aria-label="Prev page"
 				>
@@ -44,7 +44,7 @@ export const Pagination = ({
 				<Button
 					size="icon"
 					variant="outline"
-					onClick={() => navigateToPage(currentPage + 1)}
+					onClick={() => handleNavigate(currentPage + 1)}
 					disabled={currentPage === totalPages}
 					aria-label="Next page"
 				>
@@ -54,7 +54,7 @@ export const Pagination = ({
 				<Button
 					size="icon"
 					variant="outline"
-					onClick={() => navigateToPage(totalPages)}
+					onClick={() => handleNavigate(totalPages)}
 					disabled={currentPage === totalPages}
 					aria-label="Last page"
 				>

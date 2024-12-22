@@ -5,13 +5,13 @@ export function usePagination() {
 	const searchParams = useSearchParams()
 	const pathname = usePathname()
 
-	const navigateToPage = (pageNumber: number | string) => {
+	const handleNavigate = (page: number | string) => {
 		const params = new URLSearchParams(searchParams)
-		params.set('page', pageNumber.toString())
+		params.set('page', page.toString())
 		router.push(`${pathname}?${params.toString()}`)
 	}
 
 	return {
-		navigateToPage,
+		handleNavigate,
 	}
 }
