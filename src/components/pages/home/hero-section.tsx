@@ -1,4 +1,4 @@
-import { Search } from '@/components/search'
+import { Search } from '@/components/shared/search'
 import Image from 'next/image'
 
 export const HeroSection = () => {

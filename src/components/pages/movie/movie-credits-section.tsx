@@ -1,4 +1,4 @@
-import { SectionTitle } from '@/components/section-title'
+import { SectionTitle } from '@/components/shared/section-title'
 import type { CastMember } from '@/types/movie-credits'
 import { MovieCreditCard } from './movie-credit-card'
 

@@ -1,4 +1,4 @@
-import { Search } from '@/components/search'
+import { Search } from '@/components/shared/search'
 import {
 	Dialog,
 	DialogContent,

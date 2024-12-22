@@ -1,7 +1,7 @@
-import { MovieList } from '@/components/movie-list'
-import { Pagination } from '@/components/pagination'
-import { Search } from '@/components/search'
-import { SectionTitle } from '@/components/section-title'
+import { MovieList } from '@/components/shared/movie-list'
+import { Pagination } from '@/components/shared/pagination'
+import { Search } from '@/components/shared/search'
+import { SectionTitle } from '@/components/shared/section-title'
 import { getMovies } from '@/services/get-movies'
 
 export const metadata = {

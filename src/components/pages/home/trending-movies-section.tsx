@@ -1,6 +1,6 @@
-import { SectionTitle } from '@/components/section-title'
+import { SectionTitle } from '@/components/shared/section-title'
 import { getTrendingMovies } from '@/services/get-trending-movies'
-import { MovieCard } from '../movie-card'
+import { MovieCard } from './movie-card'
 
 export const TrendingMoviesSection = async () => {
 	const data = await getTrendingMovies()

@@ -1,6 +1,6 @@
-import { SectionTitle } from '@/components/section-title'
+import { SectionTitle } from '@/components/shared/section-title'
 import { getPopularMovies } from '@/services/get-popular-movies'
-import { MovieCard } from '../movie-card'
+import { MovieCard } from './movie-card'
 
 export const PopularMoviesSection = async () => {
 	const data = await getPopularMovies()

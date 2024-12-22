@@ -1,5 +1,5 @@
-import { MovieCard } from '@/components/movie-card'
 import type { Movie } from '@/types/movie'
+import { MovieCard } from './movie-card'
 
 type MovieListProps = {
 	movies: Movie[] | undefined

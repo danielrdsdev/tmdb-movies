@@ -1,6 +1,6 @@
+import { LogoIcon } from '@/components/shared/icons'
 import { siteConfig } from '@/config/site'
 import { Link } from 'next-view-transitions'
-import { LogoIcon } from '../icons'
 import { NavLink } from './nav-link'
 import { SearchDialog } from './search-dialog'
 

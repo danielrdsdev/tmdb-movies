@@ -1,12 +1,12 @@
+import { AdditionalInformation } from '@/components/pages/movie/additional-information'
+import { MovieCreditsSection } from '@/components/pages/movie/movie-credits-section'
+import { MovieDetailsSection } from '@/components/pages/movie/movie-details-section'
 import { getMovieCredits } from '@/services/get-movie-credits'
 import { getMovieDetails } from '@/services/get-movie-details'
 import { getMovies } from '@/services/get-movies'
 import { siteUrl } from '@/utils/env'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { AdditionalInformation } from './components/additional-information'
-import { MovieCreditsSection } from './components/movie-credits-section'
-import { MovieDetailsSection } from './components/movie-details-section'
 
 export async function generateStaticParams() {
 	const data = await getMovies()

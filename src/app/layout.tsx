@@ -1,5 +1,5 @@
-import { Footer } from '@/components/footer'
-import { Header } from '@/components/header'
+import { Footer } from '@/components/layout/footer'
+import { Header } from '@/components/layout/header'
 import { siteConfig } from '@/config/site'
 import { inter } from '@/styles/fonts'
 import '@/styles/globals.css'

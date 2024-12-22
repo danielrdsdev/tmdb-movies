@@ -6,7 +6,7 @@ import {
 	ChevronsLeft,
 	ChevronsRight,
 } from 'lucide-react'
-import { Button } from './ui/button'
+import { Button } from '../ui/button'
 
 export const Pagination = ({
 	totalPages,
