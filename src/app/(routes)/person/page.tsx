@@ -16,7 +16,9 @@ export default async function PersonPage(props: {
 
 	return (
 		<section className="space-y-8 py-8 container">
-			<SectionTitle>Pessoas</SectionTitle>
+			<SectionTitle>
+				Pessoas <span className="text-primary">populares</span>
+			</SectionTitle>
 
 			<Suspense fallback={<PersonListSkeleton />} key={page}>
 				<PersonList page={page} />

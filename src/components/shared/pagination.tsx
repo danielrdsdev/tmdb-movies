@@ -16,8 +16,9 @@ export const Pagination = ({
 
 	return (
 		<div className="flex justify-between items-center">
-			<p className="text-sm">
-				Pagina {currentPage} de {totalPages}
+			<p className="text-muted-foreground text-sm">
+				Pagina <span className="text-foreground">{currentPage}</span> de{' '}
+				<span className="text-foreground">{totalPages}</span>
 			</p>
 
 			<div className="flex items-center gap-2">
