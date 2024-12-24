@@ -11,7 +11,7 @@ export const TrendingTvSection = () => {
 			<Tabs defaultValue="day" className="space-y-4">
 				<div className="flex items-center gap-4">
 					<SectionTitle>
-						Tendencias em <span className="text-primary">séries</span>
+						Tendências em <span className="text-primary">séries</span>
 					</SectionTitle>
 
 					<TabsList>

@@ -11,7 +11,7 @@ export const TrendingMoviesSection = () => {
 			<Tabs defaultValue="day" className="space-y-4">
 				<div className="flex items-center gap-4">
 					<SectionTitle>
-						Tendencias em <span className="text-primary">filmes</span>
+						Tendências em <span className="text-primary">filmes</span>
 					</SectionTitle>
 
 					<TabsList>
