@@ -1,8 +1,8 @@
 import { TvCard } from '@/components/shared/tv-card'
 import { getTrendingTv } from '@/services/tv/get-trending-tv'
 
-export const TrendingTvList = async () => {
-	const data = await getTrendingTv()
+export const TrendingTvWeek = async () => {
+	const data = await getTrendingTv('week')
 
 	return (
 		<div

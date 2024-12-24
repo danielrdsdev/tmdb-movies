@@ -3,12 +3,12 @@ import type { MovieData } from '@/types/movie'
 
 type MovieTrendingResponse = MovieData
 
-export async function getTrendingMovie(): Promise<
-	MovieTrendingResponse | undefined
-> {
+export async function getTrendingMovie(
+	date: string
+): Promise<MovieTrendingResponse | undefined> {
 	try {
 		const data = await api
-			.get('trending/movie/day', {
+			.get(`trending/movie/${date}`, {
 				searchParams: {
 					language: 'pt-BR',
 				},

@@ -1,8 +1,8 @@
-import { MovieCard } from '@/components/shared/movie-card'
-import { getTrendingMovie } from '@/services/movie/get-trending-movie'
+import { TvCard } from '@/components/shared/tv-card'
+import { getTrendingTv } from '@/services/tv/get-trending-tv'
 
-export const TrendingMoviesList = async () => {
-	const data = await getTrendingMovie()
+export const TrendingTvDay = async () => {
+	const data = await getTrendingTv('day')
 
 	return (
 		<div
@@ -11,19 +11,19 @@ export const TrendingMoviesList = async () => {
 				maskImage: 'linear-gradient(to left, transparent, #fafafa 10%)',
 			}}
 		>
-			{data?.results.map((movie) => (
-				<MovieCard key={movie.id} movie={movie} />
+			{data?.results.map((tv) => (
+				<TvCard key={tv.id} tv={tv} />
 			))}
 
 			{data && data.results.length <= 0 && (
 				<p className="text-center text-muted-foreground">
-					Nenhum filme encontrado
+					Nenhum resultado encontrado
 				</p>
 			)}
 
 			{!data && (
 				<p className="text-center text-muted-foreground">
-					Erro ao buscar filmes
+					Erro ao buscar resultados
 				</p>
 			)}
 		</div>

@@ -1,18 +1,37 @@
 import { SectionTitle } from '@/components/shared/section-title'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Suspense } from 'react'
 import { MovieListSkeleton } from '../movie-list-skeleton'
-import { TrendingTvList } from './trending-tv-list'
+import { TrendingTvDay } from './trending-tv-day'
+import { TrendingTvWeek } from './trending-tv-week'
 
 export const TrendingTvSection = () => {
 	return (
-		<section className="space-y-4 py-8 container">
-			<SectionTitle>
-				Tendencias em <span className="text-primary">séries</span>
-			</SectionTitle>
+		<section className="py-8 container">
+			<Tabs defaultValue="day" className="space-y-4">
+				<div className="flex items-center gap-4">
+					<SectionTitle>
+						Tendencias em <span className="text-primary">séries</span>
+					</SectionTitle>
 
-			<Suspense fallback={<MovieListSkeleton />}>
-				<TrendingTvList />
-			</Suspense>
+					<TabsList>
+						<TabsTrigger value="day">Hoje</TabsTrigger>
+						<TabsTrigger value="week">Esta semana</TabsTrigger>
+					</TabsList>
+				</div>
+
+				<TabsContent value="day">
+					<Suspense fallback={<MovieListSkeleton />}>
+						<TrendingTvDay />
+					</Suspense>
+				</TabsContent>
+
+				<TabsContent value="week">
+					<Suspense fallback={<MovieListSkeleton />}>
+						<TrendingTvWeek />
+					</Suspense>
+				</TabsContent>
+			</Tabs>
 		</section>
 	)
 }

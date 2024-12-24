@@ -3,10 +3,12 @@ import type { TvData } from '@/types/tv'
 
 type TvTrendingResponse = TvData
 
-export async function getTrendingTv(): Promise<TvTrendingResponse | undefined> {
+export async function getTrendingTv(
+	date: string
+): Promise<TvTrendingResponse | undefined> {
 	try {
 		const data = await api
-			.get('trending/tv/day', {
+			.get(`trending/tv/${date}`, {
 				searchParams: {
 					language: 'pt-BR',
 				},
