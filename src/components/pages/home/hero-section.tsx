@@ -4,7 +4,7 @@ import { Suspense } from 'react'
 
 export const HeroSection = () => {
 	return (
-		<section className="relative flex justify-center items-center bg-black w-full h-[35rem]">
+		<section className="relative flex justify-center items-center bg-black w-full h-[15rem] md:h-[25rem] lg:h-[35rem]">
 			<Image
 				src="/banner-hero.webp"
 				alt="Banner hero"
@@ -17,10 +17,10 @@ export const HeroSection = () => {
 
 			<div className="flex flex-col gap-8 container">
 				<div className="z-10 space-y-2">
-					<h1 className="font-bold text-3xl lg:text-4xl leading-none tracking-tight">
+					<h1 className="font-bold text-2xl lg:text-4xl leading-none tracking-tight">
 						Bem-vindo(a).
 					</h1>
-					<h2 className="font-semibold text-lg lg:text-xl leading-none">
+					<h2 className="font-semibold text-sm lg:text-xl lg:leading-none">
 						Milhões de filmes, séries e pessoas para descobrires. Explora já.
 					</h2>
 				</div>

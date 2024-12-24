@@ -1,7 +1,6 @@
 import { SearchList } from '@/components/pages/search/search-list'
 import { SearchListSkeleton } from '@/components/pages/search/search-list-skeleton'
 import { Search } from '@/components/shared/search'
-import { SectionTitle } from '@/components/shared/section-title'
 import {
 	Breadcrumb,
 	BreadcrumbItem,
@@ -56,8 +55,6 @@ export default async function SearchPage(props: {
 					placeholder="Pesquisar por um filme, série ou pessoa"
 				/>
 			</Suspense>
-
-			<SectionTitle>Resultados da pesquisa</SectionTitle>
 
 			<Suspense fallback={<SearchListSkeleton />} key={query + page}>
 				<SearchList query={query} page={page} />

@@ -1,4 +1,4 @@
-import { MEDIA_TYPES } from '@/constants/media-type'
+import { MEDIA_TYPES_URL } from '@/constants/media-type'
 import type { Search } from '@/types/search-multi'
 import { format } from 'date-fns'
 import { ImageOff } from 'lucide-react'
@@ -12,10 +12,10 @@ interface SearchCardProps {
 export const SearchCard = ({ search }: SearchCardProps) => {
 	return (
 		<Link
-			href={`${MEDIA_TYPES[search.media_type]}/${search.id}`}
-			className="gap-4 grid grid-cols-[5.875rem,1fr] shadow-lg pr-4 border rounded-lg overflow-hidden"
+			href={`${MEDIA_TYPES_URL[search.media_type]}/${search.id}`}
+			className="grid grid-cols-[5.875rem,1fr] shadow-lg pr-4 border rounded-lg overflow-hidden"
 		>
-			<div className="relative border-r w-[5.875rem] h-[8.8125rem]">
+			<div className="relative border-r w-[5.875rem] h-[8.8125rem] shrink-0">
 				{search.poster_path && (
 					<Image
 						src={`https://image.tmdb.org/t/p/w400${search.poster_path}`}
