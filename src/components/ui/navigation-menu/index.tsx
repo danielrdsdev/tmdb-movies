@@ -1,3 +1,4 @@
+'use client'
 import {
 	NavigationMenuContent,
 	NavigationMenuItem,
@@ -8,13 +9,17 @@ import {
 	navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu/primitive'
 import type { NavLink } from '@/config/site'
+import { cn } from '@/lib/utils'
 import { Link } from 'next-view-transitions'
+import { usePathname } from 'next/navigation'
 
 type NavigationMenuProps = {
 	items: NavLink[]
 }
 
 export const NavigationMenu = ({ items }: NavigationMenuProps) => {
+	const pathname = usePathname()
+
 	return (
 		<NavigationMenuRoot>
 			<NavigationMenuList>
@@ -22,13 +27,26 @@ export const NavigationMenu = ({ items }: NavigationMenuProps) => {
 					<NavigationMenuItem key={nav.label}>
 						<NavigationMenuTrigger>{nav.label}</NavigationMenuTrigger>
 						<NavigationMenuContent>
-							{nav.items?.map((item) => (
-								<Link key={item.href} href={item.href} legacyBehavior passHref>
-									<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-										{item.label}
-									</NavigationMenuLink>
-								</Link>
-							))}
+							<div className="w-[10.8125rem]">
+								{nav.items?.map((item) => (
+									<Link
+										key={item.href}
+										href={item.href}
+										legacyBehavior
+										passHref
+									>
+										<NavigationMenuLink
+											data-pathname={pathname === item.href}
+											className={cn(
+												navigationMenuTriggerStyle(),
+												'w-full data-[pathname=true]:text-accent-foreground'
+											)}
+										>
+											{item.label}
+										</NavigationMenuLink>
+									</Link>
+								))}
+							</div>
 						</NavigationMenuContent>
 					</NavigationMenuItem>
 				))}
