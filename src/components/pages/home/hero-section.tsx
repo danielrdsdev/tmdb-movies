@@ -24,7 +24,10 @@ export const HeroSection = () => {
 					</h2>
 				</div>
 
-				<Search />
+				<Search
+					action="/search"
+					placeholder="Pesquisar por um filme, série ou pessoa"
+				/>
 			</div>
 		</section>
 	)

@@ -1,8 +1,8 @@
-import { MovieList } from '@/components/shared/movie-list'
-import { Pagination } from '@/components/shared/pagination'
+import { SearchList } from '@/components/pages/search/search-list'
+import { SearchListSkeleton } from '@/components/pages/search/search-list-skeleton'
 import { Search } from '@/components/shared/search'
 import { SectionTitle } from '@/components/shared/section-title'
-import { getMoviesSearch } from '@/services/get-movies-search'
+import { Suspense } from 'react'
 
 export const metadata = {
 	title: 'Pesquisar filmes',
@@ -15,35 +15,19 @@ export default async function SearchPage(props: {
 	const searchParams = await props.searchParams
 	const query = searchParams?.query || ''
 	const page = Number(searchParams?.page) || 1
-	const data = await getMoviesSearch(query, page)
 
 	return (
 		<section className="space-y-8 py-8 container">
-			<Search />
+			<Search
+				action="/search"
+				placeholder="Pesquisar por um filme, série ou pessoa"
+			/>
 
-			<div className="space-y-6">
-				<SectionTitle>
-					Resultados da pesquisa ({data?.total_results})
-				</SectionTitle>
+			<SectionTitle>Resultados da pesquisa</SectionTitle>
 
-				<MovieList movies={data?.results} />
-
-				{data && data.results.length <= 0 && (
-					<p className="text-center text-muted-foreground">
-						Nenhum filme encontrado
-					</p>
-				)}
-
-				{!data && (
-					<p className="text-center text-muted-foreground">
-						Erro ao buscar filmes
-					</p>
-				)}
-
-				{data && (
-					<Pagination totalPages={data.total_pages} currentPage={page} />
-				)}
-			</div>
+			<Suspense fallback={<SearchListSkeleton />} key={query + page}>
+				<SearchList query={query} page={page} />
+			</Suspense>
 		</section>
 	)
 }

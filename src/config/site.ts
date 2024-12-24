@@ -45,12 +45,16 @@ export const siteConfig: SiteConfig = {
 	},
 	navLinks: [
 		{
-			label: 'Home',
-			href: '/',
+			label: 'Filmes',
+			href: '/movie',
 		},
 		{
-			label: 'Filmes',
-			href: '/movies',
+			label: 'Séries',
+			href: '/tv',
+		},
+		{
+			label: 'Pessoas',
+			href: '/person',
 		},
 	],
 }

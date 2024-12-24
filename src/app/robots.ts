@@ -5,7 +5,17 @@ export default function robots(): MetadataRoute.Robots {
 	return {
 		rules: {
 			userAgent: '*',
-			allow: ['/', '/movies'],
+			allow: [
+				'/',
+				'/movie',
+				'/movie/now-playing',
+				'/movie/top-rated',
+				'/movie/upcoming',
+				'/tv',
+				'/tv/airing-today',
+				'/tv/on-the-air',
+				'/tv/top-rated',
+			],
 			disallow: [],
 		},
 		sitemap: `${siteUrl}/sitemap.xml`,

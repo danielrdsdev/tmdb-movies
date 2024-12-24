@@ -17,13 +17,16 @@ export const SearchDialog = () => {
 			</DialogTrigger>
 			<DialogContent>
 				<DialogHeader>
-					<DialogTitle>Buscar filmes</DialogTitle>
+					<DialogTitle>Fazer uma pesquisa</DialogTitle>
 					<DialogDescription>
-						Digite para buscar algum filme desejado
+						Encontre filmes, séries ou pessoas
 					</DialogDescription>
 				</DialogHeader>
 
-				<Search />
+				<Search
+					action="/search"
+					placeholder="Pesquisar filme, série ou pessoa"
+				/>
 			</DialogContent>
 		</Dialog>
 	)

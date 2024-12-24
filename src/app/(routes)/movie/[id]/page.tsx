@@ -1,9 +1,9 @@
-import { AdditionalInformation } from '@/components/pages/movie/additional-information'
-import { MovieCreditsSection } from '@/components/pages/movie/movie-credits-section'
-import { MovieDetailsSection } from '@/components/pages/movie/movie-details-section'
-import { getMovieCredits } from '@/services/get-movie-credits'
-import { getMovieDetails } from '@/services/get-movie-details'
-import { getMovies } from '@/services/get-movies'
+import { AdditionalInformation } from '@/components/pages/movie/id/additional-information'
+import { MovieDetailsSection } from '@/components/pages/movie/id/movie-details-section'
+import { CastSection } from '@/components/shared/cast-section'
+import { getMovieCredits } from '@/services/movie/get-movie-credits'
+import { getMovieDetails } from '@/services/movie/get-movie-details'
+import { getMovies } from '@/services/movie/get-movies'
 import { siteUrl } from '@/utils/env'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
@@ -74,7 +74,7 @@ export default async function MoviePage({
 			/>
 
 			<div className="flex flex-col items-start gap-8 lg:gap-4 lg:grid lg:grid-cols-[90%,1fr] py-4 container">
-				<MovieCreditsSection data={movieCreditsData.cast} />
+				<CastSection data={movieCreditsData.cast} />
 				<AdditionalInformation data={movieDetailsData} />
 			</div>
 		</>
