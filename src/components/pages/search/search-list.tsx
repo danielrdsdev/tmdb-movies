@@ -10,9 +10,13 @@ type SearchListProps = {
 export const SearchList = async ({ query, page }: SearchListProps) => {
 	const data = await getSearchMulti(query, page)
 
+	const filteredData = data?.results.filter(
+		(result) => result.poster_path || result.profile_path
+	)
+
 	return (
 		<div className="space-y-6">
-			{data?.results.map((result) => (
+			{filteredData?.map((result) => (
 				<SearchCard key={result.id} search={result} />
 			))}
 

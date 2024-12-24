@@ -26,16 +26,12 @@ export const PersonCard = ({ person }: PersonCardProps) => {
 
 			<div className="flex flex-col space-y-0.5 p-4">
 				<h2 className="font-semibold">{person.name}</h2>
-				<div className="flex flex-wrap items-center gap-2">
-					{person.known_for.map((tv) => (
-						<p
-							key={tv.id}
-							className="text-muted-foreground text-sm leading-none"
-						>
-							{tv.title || tv.name},
-						</p>
-					))}
-				</div>
+
+				<p className="line-clamp-2 text-muted-foreground text-sm">
+					{person.known_for
+						.map((knownFor) => knownFor.title || knownFor.name)
+						.join(', ')}
+				</p>
 			</div>
 		</Link>
 	)
