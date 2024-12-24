@@ -16,7 +16,9 @@ export default async function AiringTodayTvPage(props: {
 
 	return (
 		<section className="space-y-8 py-8 container">
-			<SectionTitle>Séries emitidas hoje</SectionTitle>
+			<SectionTitle>
+				Séries <span className="text-primary">emitidas hoje</span>
+			</SectionTitle>
 
 			<Suspense fallback={<MovieListSkeleton />} key={page}>
 				<AiringTodayTvList page={page} />

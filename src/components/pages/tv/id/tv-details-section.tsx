@@ -13,7 +13,7 @@ type TvDetailsSectionProps = {
 
 export const TvDetailsSection = ({ data, crew }: TvDetailsSectionProps) => {
 	return (
-		<section className="relative flex items-center bg-black py-8 lg:py-4 w-full lg:h-[31.875rem] text-foreground-secondary">
+		<section className="relative flex items-center bg-black py-8 lg:py-4 w-full lg:h-[31.875rem] text-foreground">
 			<div
 				className="top-0 absolute w-full h-[18.2rem] lg:h-[31.875rem]"
 				style={{

@@ -16,7 +16,9 @@ export default async function UpcomingMoviesPage(props: {
 
 	return (
 		<section className="space-y-8 py-8 container">
-			<SectionTitle>Filmes a estrear em breve</SectionTitle>
+			<SectionTitle>
+				Filmes a <span className="text-primary">estrear em breve</span>
+			</SectionTitle>
 
 			<Suspense fallback={<MovieListSkeleton />} key={page}>
 				<UpcomingMovieList page={page} />

@@ -16,7 +16,7 @@ export const SearchCard = ({ search }: SearchCardProps) => {
 	return (
 		<Link
 			href={`${url[search.media_type]}/${search.id}`}
-			className="gap-4 border-muted grid grid-cols-[5.875rem,1fr] shadow-lg pr-4 border rounded-lg overflow-hidden"
+			className="gap-4 grid grid-cols-[5.875rem,1fr] shadow-lg pr-4 border rounded-lg overflow-hidden"
 		>
 			<div className="relative w-[5.875rem] h-[8.8125rem]">
 				{search.poster_path && (

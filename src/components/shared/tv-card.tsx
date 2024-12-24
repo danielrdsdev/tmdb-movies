@@ -30,9 +30,9 @@ export const TvCard = ({ tv }: TvCardProps) => {
 				/>
 			</div>
 
-			<div className="mt-1 px-2">
-				<strong className="block text-sm">{tv.name}</strong>
-				<small className="block text-muted-foreground-foreground text-xs">
+			<div className="mt-2 px-2">
+				<strong className="block text-primary text-sm">{tv.name}</strong>
+				<small className="block text-muted-foreground text-xs">
 					{formatDate(tv.first_air_date)}
 				</small>
 			</div>

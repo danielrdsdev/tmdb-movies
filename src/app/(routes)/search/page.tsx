@@ -18,10 +18,12 @@ export default async function SearchPage(props: {
 
 	return (
 		<section className="space-y-8 py-8 container">
-			<Search
-				action="/search"
-				placeholder="Pesquisar por um filme, série ou pessoa"
-			/>
+			<Suspense fallback={null}>
+				<Search
+					action="/search"
+					placeholder="Pesquisar por um filme, série ou pessoa"
+				/>
+			</Suspense>
 
 			<SectionTitle>Resultados da pesquisa</SectionTitle>
 

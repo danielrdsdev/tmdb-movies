@@ -16,7 +16,9 @@ export default async function NowPlayingMoviesPage(props: {
 
 	return (
 		<section className="space-y-8 py-8 container">
-			<SectionTitle>Filmes em exibição</SectionTitle>
+			<SectionTitle>
+				Filmes <span className="text-primary">em exibição</span>
+			</SectionTitle>
 
 			<Suspense fallback={<MovieListSkeleton />} key={page}>
 				<NowPlayingMovieList page={page} />

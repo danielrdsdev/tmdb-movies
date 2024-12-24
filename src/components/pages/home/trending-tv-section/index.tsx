@@ -6,7 +6,9 @@ import { TrendingTvList } from './trending-tv-list'
 export const TrendingTvSection = () => {
 	return (
 		<section className="space-y-4 py-8 container">
-			<SectionTitle>Tendencias em séries</SectionTitle>
+			<SectionTitle>
+				Tendencias em <span className="text-primary">séries</span>
+			</SectionTitle>
 
 			<Suspense fallback={<MovieListSkeleton />}>
 				<TrendingTvList />

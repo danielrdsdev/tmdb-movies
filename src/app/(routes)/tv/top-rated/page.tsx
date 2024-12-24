@@ -16,7 +16,9 @@ export default async function TopRatedTvPage(props: {
 
 	return (
 		<section className="space-y-8 py-8 container">
-			<SectionTitle>Séries com a melhor classificação</SectionTitle>
+			<SectionTitle>
+				Séries com a <span className="text-primary">melhor classificação</span>
+			</SectionTitle>
 
 			<Suspense fallback={<MovieListSkeleton />} key={page}>
 				<TopRatedTvList page={page} />

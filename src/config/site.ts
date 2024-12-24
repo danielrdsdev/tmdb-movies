@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 type NavLink = {
 	label: string
 	href: string
+	items?: NavLink[]
 }
 
 type SiteConfig = {
@@ -47,10 +48,46 @@ export const siteConfig: SiteConfig = {
 		{
 			label: 'Filmes',
 			href: '/movie',
+			items: [
+				{
+					label: 'Populares',
+					href: '/movie',
+				},
+				{
+					label: 'Em Exibição',
+					href: '/movie/now-playing',
+				},
+				{
+					label: 'Brevemente',
+					href: '/movie/upcoming',
+				},
+				{
+					label: 'Melhor Classificação',
+					href: '/movie/top-rated',
+				},
+			],
 		},
 		{
 			label: 'Séries',
 			href: '/tv',
+			items: [
+				{
+					label: 'Populares',
+					href: '/tv',
+				},
+				{
+					label: 'Emitidos Hoje',
+					href: '/tv/airing-today',
+				},
+				{
+					label: 'Na TV',
+					href: '/tv/on-the-air',
+				},
+				{
+					label: 'Melhor Classificação',
+					href: '/tv/top-rated',
+				},
+			],
 		},
 		{
 			label: 'Pessoas',

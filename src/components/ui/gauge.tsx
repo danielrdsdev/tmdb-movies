@@ -44,7 +44,7 @@ export const Gauge = ({
 	const colorClass = getColor(value)
 
 	return (
-		<div className="flex flex-col items-center justify-center relative">
+		<div className="relative flex flex-col justify-center items-center">
 			<svg
 				fill="none"
 				shapeRendering="crispEdges"
@@ -56,7 +56,7 @@ export const Gauge = ({
 			>
 				<title>Gauge svg</title>
 				<circle
-					className="text-foreground"
+					className="text-background"
 					strokeWidth="12"
 					stroke="currentColor"
 					fill="currentColor"
@@ -86,7 +86,7 @@ export const Gauge = ({
 			{showValue ? (
 				<div className="absolute opacity-0 animate-gauge_fadeIn">
 					<p
-						className={`text-foreground-secondary font-semibold tracking-tight ${sizes[size].textSize}`}
+						className={`text-foreground font-semibold tracking-tight ${sizes[size].textSize}`}
 					>
 						{value}
 					</p>

@@ -10,7 +10,7 @@ export const PersonCard = ({ person }: PersonCardProps) => {
 	return (
 		<Link
 			href={`/person/${person.id}`}
-			className="border-muted shadow-lg border rounded-lg w-full overflow-hidden"
+			className="shadow-lg border rounded-lg w-full overflow-hidden"
 		>
 			<div className="relative flex justify-center items-center w-full h-[19.6875rem]">
 				<Image

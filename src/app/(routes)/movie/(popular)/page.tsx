@@ -16,7 +16,9 @@ export default async function PopularMoviesPage(props: {
 
 	return (
 		<section className="space-y-8 py-8 container">
-			<SectionTitle>Filmes populares</SectionTitle>
+			<SectionTitle>
+				Filmes <span className="text-primary">populares</span>
+			</SectionTitle>
 
 			<Suspense fallback={<MovieListSkeleton />} key={page}>
 				<PopularMovieList page={page} />

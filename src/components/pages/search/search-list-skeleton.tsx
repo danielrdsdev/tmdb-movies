@@ -6,7 +6,7 @@ export const SearchListSkeleton = () => {
 			{[...Array(20)].map((_, i) => (
 				<div
 					key={`${i + 1}`}
-					className="gap-4 border-muted grid grid-cols-[5.875rem,1fr] shadow-lg pr-4 border rounded-lg"
+					className="gap-4 grid grid-cols-[5.875rem,1fr] shadow-lg pr-4 border rounded-lg"
 				>
 					<Skeleton className="w-[5.875rem] h-[8.8125rem]" />
 

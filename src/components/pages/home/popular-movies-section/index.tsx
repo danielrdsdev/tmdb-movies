@@ -6,7 +6,9 @@ import { PopularMoviesList } from './popular-movies-list'
 export const PopularMoviesSection = () => {
 	return (
 		<section className="space-y-4 py-8 container">
-			<SectionTitle>Os mais populares</SectionTitle>
+			<SectionTitle>
+				Os mais <span className="text-primary">populares</span>
+			</SectionTitle>
 
 			<Suspense fallback={<MovieListSkeleton />}>
 				<PopularMoviesList />

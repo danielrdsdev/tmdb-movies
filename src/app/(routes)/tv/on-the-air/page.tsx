@@ -16,7 +16,9 @@ export default async function OnTheAirTvPage(props: {
 
 	return (
 		<section className="space-y-8 py-8 container">
-			<SectionTitle>Séries no ar hoje</SectionTitle>
+			<SectionTitle>
+				Séries <span className="text-primary">no ar hoje</span>
+			</SectionTitle>
 
 			<Suspense fallback={<MovieListSkeleton />} key={page}>
 				<OnTheAirTvList page={page} />

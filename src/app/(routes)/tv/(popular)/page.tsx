@@ -16,7 +16,9 @@ export default async function PopularTvPage(props: {
 
 	return (
 		<section className="space-y-8 py-8 container">
-			<SectionTitle>Séries</SectionTitle>
+			<SectionTitle>
+				Séries <span className="text-primary">populares</span>
+			</SectionTitle>
 
 			<Suspense fallback={<MovieListSkeleton />} key={page}>
 				<PopularTvList page={page} />

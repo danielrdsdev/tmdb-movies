@@ -6,7 +6,7 @@ type InfoCardProps = {
 export const InfoCard = ({ info_title, info_content }: InfoCardProps) => {
 	return (
 		<div className="space-y-1">
-			<h3 className="font-semibold text-sm">{info_title}</h3>
+			<h3 className="font-semibold text-primary text-sm">{info_title}</h3>
 			<p className="text-sm">{info_content}</p>
 		</div>
 	)
