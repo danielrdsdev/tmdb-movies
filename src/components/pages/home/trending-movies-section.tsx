@@ -1,7 +1,7 @@
 import { SectionTitle } from '@/components/shared/section-title'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Suspense } from 'react'
-import { MovieListSkeleton } from '../movie-list-skeleton'
+import { MovieListSkeleton } from './movie-list-skeleton'
 import { TrendingMoviesDay } from './trending-movies-day'
 import { TrendingMoviesWeek } from './trending-movies-week'
 

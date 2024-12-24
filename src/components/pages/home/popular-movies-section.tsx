@@ -1,6 +1,6 @@
 import { SectionTitle } from '@/components/shared/section-title'
 import { Suspense } from 'react'
-import { MovieListSkeleton } from '../movie-list-skeleton'
+import { MovieListSkeleton } from './movie-list-skeleton'
 import { PopularMoviesList } from './popular-movies-list'
 
 export const PopularMoviesSection = () => {
