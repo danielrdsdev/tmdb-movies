@@ -1,7 +1,7 @@
 import { siteUrl } from '@/utils/env'
 import type { Metadata } from 'next'
 
-type NavLink = {
+export type NavLink = {
 	label: string
 	href: string
 	items?: NavLink[]
