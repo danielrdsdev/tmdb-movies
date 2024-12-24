@@ -9,6 +9,6 @@ export const api = ky.create({
 	},
 	cache: 'force-cache',
 	next: {
-		revalidate: 60, // revalidate cache every 60 seconds
+		revalidate: 60 * 30, // revalidate cache every 30 minutes
 	},
 })
