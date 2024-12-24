@@ -13,8 +13,8 @@ import { Link } from 'next-view-transitions'
 import { Suspense } from 'react'
 
 export const metadata = {
-	title: 'Séries emitidas hoje',
-	description: 'Encontre as séries emitidas hoje',
+	title: 'Séries em exibição hoje',
+	description: 'Encontre as séries em exibição hoje',
 }
 
 export default async function AiringTodayTvPage(props: {
@@ -40,13 +40,13 @@ export default async function AiringTodayTvPage(props: {
 					</BreadcrumbItem>
 					<BreadcrumbSeparator />
 					<BreadcrumbItem>
-						<BreadcrumbPage>Emitidos Hoje</BreadcrumbPage>
+						<BreadcrumbPage>Em exibição hoje</BreadcrumbPage>
 					</BreadcrumbItem>
 				</BreadcrumbList>
 			</Breadcrumb>
 
 			<SectionTitle>
-				Séries <span className="text-primary">emitidas hoje</span>
+				Séries <span className="text-primary">em exibição hoje</span>
 			</SectionTitle>
 
 			<Suspense fallback={<MovieListSkeleton />} key={page}>

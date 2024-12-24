@@ -54,15 +54,15 @@ export const siteConfig: SiteConfig = {
 					href: '/movie',
 				},
 				{
-					label: 'Em Exibição',
+					label: 'Em cartaz',
 					href: '/movie/now-playing',
 				},
 				{
-					label: 'Brevemente',
+					label: 'Próximas estreias',
 					href: '/movie/upcoming',
 				},
 				{
-					label: 'Melhor Classificação',
+					label: 'Mais bem avaliados',
 					href: '/movie/top-rated',
 				},
 			],
@@ -76,7 +76,7 @@ export const siteConfig: SiteConfig = {
 					href: '/tv',
 				},
 				{
-					label: 'Emitidos Hoje',
+					label: 'Em exibição hoje',
 					href: '/tv/airing-today',
 				},
 				{
@@ -84,7 +84,7 @@ export const siteConfig: SiteConfig = {
 					href: '/tv/on-the-air',
 				},
 				{
-					label: 'Melhor Classificação',
+					label: 'Mais bem avaliadas',
 					href: '/tv/top-rated',
 				},
 			],

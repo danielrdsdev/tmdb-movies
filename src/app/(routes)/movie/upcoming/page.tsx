@@ -13,7 +13,7 @@ import { Link } from 'next-view-transitions'
 import { Suspense } from 'react'
 
 export const metadata = {
-	title: 'Filmes a estrear em breve',
+	title: 'Próximas estreais em filmes',
 	description: 'Encontre os filmes que vão estrear em breve',
 }
 
@@ -40,13 +40,13 @@ export default async function UpcomingMoviesPage(props: {
 					</BreadcrumbItem>
 					<BreadcrumbSeparator />
 					<BreadcrumbItem>
-						<BreadcrumbPage>Estrear em breve</BreadcrumbPage>
+						<BreadcrumbPage>Próximas estreias</BreadcrumbPage>
 					</BreadcrumbItem>
 				</BreadcrumbList>
 			</Breadcrumb>
 
 			<SectionTitle>
-				Filmes a <span className="text-primary">estrear em breve</span>
+				Próximas <span className="text-primary">estreias</span>
 			</SectionTitle>
 
 			<Suspense fallback={<MovieListSkeleton />} key={page}>

@@ -13,8 +13,8 @@ import { Link } from 'next-view-transitions'
 import { Suspense } from 'react'
 
 export const metadata = {
-	title: 'Séries com a melhor classificação',
-	description: 'Encontre as séries com a melhor classificação',
+	title: 'Séries mais bem avaliadas',
+	description: 'Encontre as séries mais bem avaliadas',
 }
 
 export default async function TopRatedTvPage(props: {
@@ -40,13 +40,13 @@ export default async function TopRatedTvPage(props: {
 					</BreadcrumbItem>
 					<BreadcrumbSeparator />
 					<BreadcrumbItem>
-						<BreadcrumbPage>Melhor classificação</BreadcrumbPage>
+						<BreadcrumbPage>Mais bem avaliadas</BreadcrumbPage>
 					</BreadcrumbItem>
 				</BreadcrumbList>
 			</Breadcrumb>
 
 			<SectionTitle>
-				Séries com a <span className="text-primary">melhor classificação</span>
+				Séries <span className="text-primary">mais bem avaliadas</span>
 			</SectionTitle>
 
 			<Suspense fallback={<MovieListSkeleton />} key={page}>

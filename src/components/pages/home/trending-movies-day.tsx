@@ -6,7 +6,7 @@ export const TrendingMoviesDay = async () => {
 
 	return (
 		<div
-			className="flex gap-4 pb-4 w-full overflow-x-auto"
+			className="flex gap-5 pb-4 w-full overflow-x-auto"
 			style={{
 				maskImage: 'linear-gradient(to left, transparent, #fafafa 10%)',
 			}}

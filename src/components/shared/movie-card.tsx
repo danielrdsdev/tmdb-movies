@@ -12,7 +12,7 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
 	return (
 		<Link
 			href={`/movie/${movie.id}`}
-			className="flex flex-col min-w-[9.375rem]"
+			className="flex flex-col w-[9.375rem] shrink-0"
 		>
 			<div className="relative rounded-lg w-full h-[14.0625rem] overflow-hidden">
 				<Image
@@ -25,7 +25,7 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
 				/>
 			</div>
 
-			<div className="-mt-4 ml-2 w-fit">
+			<div className="-mt-3 ml-2 w-fit">
 				<Gauge
 					size="small"
 					showValue

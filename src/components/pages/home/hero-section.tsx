@@ -21,7 +21,7 @@ export const HeroSection = () => {
 						Bem-vindo(a).
 					</h1>
 					<h2 className="font-semibold text-sm lg:text-xl lg:leading-none">
-						Milhões de filmes, séries e pessoas para descobrires. Explora já.
+						Milhões de Filmes, Séries e Pessoas para Descobrir. Explore já.
 					</h2>
 				</div>
 

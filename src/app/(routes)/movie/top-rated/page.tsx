@@ -13,8 +13,8 @@ import { Link } from 'next-view-transitions'
 import { Suspense } from 'react'
 
 export const metadata = {
-	title: 'Filmes com a melhor classificação',
-	description: 'Encontre os filmes que vão estrear em breve',
+	title: 'Filmes mais bem avaliados',
+	description: 'Encontre os filmes mais bem avaliados',
 }
 
 export default async function TopRatedMoviesPage(props: {
@@ -40,13 +40,13 @@ export default async function TopRatedMoviesPage(props: {
 					</BreadcrumbItem>
 					<BreadcrumbSeparator />
 					<BreadcrumbItem>
-						<BreadcrumbPage>Melhor classificação</BreadcrumbPage>
+						<BreadcrumbPage>Mais bem avaliados</BreadcrumbPage>
 					</BreadcrumbItem>
 				</BreadcrumbList>
 			</Breadcrumb>
 
 			<SectionTitle>
-				Filmes com a <span className="text-primary">melhor classificação</span>
+				Filmes <span className="text-primary">mais bem avaliados</span>
 			</SectionTitle>
 
 			<Suspense fallback={<MovieListSkeleton />} key={page}>

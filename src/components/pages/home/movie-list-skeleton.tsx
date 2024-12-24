@@ -1,13 +1,10 @@
-import { Skeleton } from '@/components/ui/skeleton'
+import { MovieCardSkeleton } from '@/components/shared/movie-card-skeleton'
 
 export const MovieListSkeleton = () => {
 	return (
-		<div className="gap-4 grid grid-cols-8 pb-4 w-full">
+		<div className="gap-5 grid grid-cols-8 pb-4 w-full">
 			{[...Array(8)].map((_, index) => (
-				<Skeleton
-					key={`${index + 1}`}
-					className="flex flex-col min-w-[9.375rem] h-[15.625rem]"
-				/>
+				<MovieCardSkeleton key={`${index + 1}`} />
 			))}
 		</div>
 	)

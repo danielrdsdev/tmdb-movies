@@ -10,7 +10,7 @@ type TvCardProps = {
 
 export const TvCard = ({ tv }: TvCardProps) => {
 	return (
-		<Link href={`/tv/${tv.id}`} className="flex flex-col min-w-[9.375rem]">
+		<Link href={`/tv/${tv.id}`} className="flex flex-col w-[9.375rem] shrink-0">
 			<div className="relative rounded-lg w-full h-[14.0625rem] overflow-hidden">
 				<Image
 					src={`https://image.tmdb.org/t/p/w500${tv.poster_path}`}
@@ -22,7 +22,7 @@ export const TvCard = ({ tv }: TvCardProps) => {
 				/>
 			</div>
 
-			<div className="-mt-4 ml-2 w-fit">
+			<div className="-mt-3 ml-2 w-fit">
 				<Gauge
 					size="small"
 					showValue
