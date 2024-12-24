@@ -27,7 +27,7 @@ export const NavigationMenu = ({ items }: NavigationMenuProps) => {
 					<NavigationMenuItem key={nav.label}>
 						<NavigationMenuTrigger>{nav.label}</NavigationMenuTrigger>
 						<NavigationMenuContent>
-							<div className="w-[10.8125rem]">
+							<div className="p-3 w-[12.8125rem]">
 								{nav.items?.map((item) => (
 									<Link
 										key={item.href}
