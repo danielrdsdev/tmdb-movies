@@ -10,7 +10,11 @@ type TvCardProps = {
 
 export const TvCard = ({ tv }: TvCardProps) => {
 	return (
-		<Link href={`/tv/${tv.id}`} className="flex flex-col w-[9.375rem] shrink-0">
+		<Link
+			title={tv.name}
+			href={`/tv/${tv.id}`}
+			className="flex flex-col w-[9.375rem] shrink-0"
+		>
 			<div className="relative rounded-lg w-full h-[14.0625rem] overflow-hidden">
 				<Image
 					src={`https://image.tmdb.org/t/p/w500${tv.poster_path}`}
@@ -31,7 +35,9 @@ export const TvCard = ({ tv }: TvCardProps) => {
 			</div>
 
 			<div className="mt-2 px-2">
-				<strong className="block text-primary text-sm">{tv.name}</strong>
+				<strong className="block text-primary text-sm truncate">
+					{tv.name}
+				</strong>
 				<small className="block text-muted-foreground text-xs">
 					{formatDate(tv.first_air_date)}
 				</small>

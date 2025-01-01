@@ -11,6 +11,7 @@ type MovieCardProps = {
 export const MovieCard = ({ movie }: MovieCardProps) => {
 	return (
 		<Link
+			title={movie.title}
 			href={`/movie/${movie.id}`}
 			className="flex flex-col w-[9.375rem] shrink-0"
 		>
@@ -34,7 +35,9 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
 			</div>
 
 			<div className="mt-2 px-2">
-				<strong className="block text-primary text-sm">{movie.title}</strong>
+				<strong className="block text-primary text-sm truncate">
+					{movie.title}
+				</strong>
 				<small className="block text-muted-foreground text-xs">
 					{formatDate(movie.release_date)}
 				</small>
