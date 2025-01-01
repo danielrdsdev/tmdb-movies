@@ -8,8 +8,8 @@ import {
 	NavigationMenuTrigger,
 	navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu/primitive'
-import type { NavLink } from '@/config/site'
 import { cn } from '@/lib/utils'
+import type { NavLink } from '@/types/nav'
 import { Link } from 'next-view-transitions'
 import { usePathname } from 'next/navigation'
 

@@ -1,12 +1,12 @@
 import { NavigationMenu } from '@/components/ui/navigation-menu'
-import { siteConfig } from '@/config/site'
+import { siteLinks } from '@/config/links'
 import { Link } from 'next-view-transitions'
 import { NavLink } from './nav-link'
 import { SearchDialog } from './search-dialog'
 
 export const Header = () => {
-	const navWithItems = siteConfig.navLinks.filter((nav) => nav.items)
-	const navWithoutItems = siteConfig.navLinks.filter((nav) => !nav.items)
+	const navWithItems = siteLinks.filter((nav) => nav.items)
+	const navWithoutItems = siteLinks.filter((nav) => !nav.items)
 
 	return (
 		<header className="top-0 z-50 sticky bg-background border-b h-16">
