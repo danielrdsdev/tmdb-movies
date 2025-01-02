@@ -1,6 +1,7 @@
+import { getPopularMovies } from '@/services/movie/get-popular-movies'
+
 import { MovieCard } from '@/components/shared/movie-card'
 import { Pagination } from '@/components/shared/pagination'
-import { getPopularMovies } from '@/services/movie/get-popular-movies'
 
 type PopularMovieListProps = {
 	page: number

@@ -1,6 +1,7 @@
+import { getPopularTv } from '@/services/tv/get-popular-tv'
+
 import { Pagination } from '@/components/shared/pagination'
 import { TvCard } from '@/components/shared/tv-card'
-import { getPopularTv } from '@/services/tv/get-popular-tv'
 
 type PopularTvListProps = {
 	page: number

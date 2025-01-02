@@ -1,5 +1,6 @@
-import { MovieCard } from '@/components/shared/movie-card'
 import { getTrendingMovie } from '@/services/movie/get-trending-movie'
+
+import { MovieCard } from '@/components/shared/movie-card'
 
 export const TrendingMoviesDay = async () => {
 	const data = await getTrendingMovie('day')

@@ -1,6 +1,7 @@
+import { getAiringTodayTv } from '@/services/tv/get-airing-today-tv'
+
 import { Pagination } from '@/components/shared/pagination'
 import { TvCard } from '@/components/shared/tv-card'
-import { getAiringTodayTv } from '@/services/tv/get-airing-today-tv'
 
 type AiringTodayTvListProps = {
 	page: number

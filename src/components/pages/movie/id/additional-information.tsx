@@ -1,7 +1,8 @@
-import { InfoCard } from '@/components/shared/info-card'
 import { LANGUAGES } from '@/constants/languages'
 import { formatCurrency } from '@/helpers/format-currency'
 import type { MovieDetails } from '@/types/movie'
+
+import { InfoCard } from '@/components/shared/info-card'
 
 type AdditionalInformationProps = {
 	data: MovieDetails

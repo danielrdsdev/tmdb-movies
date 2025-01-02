@@ -1,9 +1,10 @@
-import { MEDIA_TYPES_URL } from '@/constants/media-type'
-import type { Search } from '@/types/search-multi'
 import { format } from 'date-fns'
 import { ImageOff } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+
+import { MEDIA_TYPES_URL } from '@/constants/media-type'
+import type { Search } from '@/types/search-multi'
 
 interface SearchCardProps {
 	search: Search

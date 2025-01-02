@@ -1,6 +1,7 @@
-import { Search } from '@/components/shared/search'
 import Image from 'next/image'
 import { Suspense } from 'react'
+
+import { Search } from '@/components/shared/search'
 
 export const HeroSection = () => {
 	return (

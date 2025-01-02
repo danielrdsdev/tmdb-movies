@@ -1,5 +1,6 @@
-import { TvCard } from '@/components/shared/tv-card'
 import { getTrendingTv } from '@/services/tv/get-trending-tv'
+
+import { TvCard } from '@/components/shared/tv-card'
 
 export const TrendingTvDay = async () => {
 	const data = await getTrendingTv('day')

@@ -1,3 +1,6 @@
+import { SearchIcon } from 'lucide-react'
+import { Suspense } from 'react'
+
 import { Search } from '@/components/shared/search'
 import { Button } from '@/components/ui/button'
 import {
@@ -8,8 +11,6 @@ import {
 	DialogTitle,
 	DialogTrigger,
 } from '@/components/ui/dialog'
-import { SearchIcon } from 'lucide-react'
-import { Suspense } from 'react'
 
 export const SearchDialog = () => {
 	return (

@@ -1,12 +1,14 @@
-import { AdditionalInformation } from '@/components/pages/movie/id/additional-information'
-import { MovieDetailsSection } from '@/components/pages/movie/id/movie-details-section'
-import { CastSection } from '@/components/shared/cast-section'
+import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+
 import { getMovieCredits } from '@/services/movie/get-movie-credits'
 import { getMovieDetails } from '@/services/movie/get-movie-details'
 import { getMovies } from '@/services/movie/get-movies'
 import { siteUrl } from '@/utils/env'
-import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
+
+import { AdditionalInformation } from '@/components/pages/movie/id/additional-information'
+import { MovieDetailsSection } from '@/components/pages/movie/id/movie-details-section'
+import { CastSection } from '@/components/shared/cast-section'
 
 export async function generateStaticParams() {
 	const data = await getMovies()

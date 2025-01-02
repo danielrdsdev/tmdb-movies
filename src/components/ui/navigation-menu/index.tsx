@@ -1,4 +1,11 @@
 'use client'
+
+import { Link } from 'next-view-transitions'
+import { usePathname } from 'next/navigation'
+
+import { cn } from '@/lib/utils'
+import type { NavLink } from '@/types/nav'
+
 import {
 	NavigationMenuContent,
 	NavigationMenuItem,
@@ -8,10 +15,6 @@ import {
 	NavigationMenuTrigger,
 	navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu/primitive'
-import { cn } from '@/lib/utils'
-import type { NavLink } from '@/types/nav'
-import { Link } from 'next-view-transitions'
-import { usePathname } from 'next/navigation'
 
 type NavigationMenuProps = {
 	items: NavLink[]

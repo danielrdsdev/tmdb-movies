@@ -1,8 +1,10 @@
-import { Gauge } from '@/components/ui/gauge'
-import { formatDate } from '@/helpers/format-date'
-import type { Tv } from '@/types/tv'
 import { Link } from 'next-view-transitions'
 import Image from 'next/image'
+
+import { formatDate } from '@/helpers/format-date'
+import type { Tv } from '@/types/tv'
+
+import { Gauge } from '@/components/ui/gauge'
 
 type TvCardProps = {
 	tv: Tv

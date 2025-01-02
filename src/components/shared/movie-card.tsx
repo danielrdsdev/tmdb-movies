@@ -1,8 +1,10 @@
-import { Gauge } from '@/components/ui/gauge'
-import { formatDate } from '@/helpers/format-date'
-import type { Movie } from '@/types/movie'
 import { Link } from 'next-view-transitions'
 import Image from 'next/image'
+
+import { formatDate } from '@/helpers/format-date'
+import type { Movie } from '@/types/movie'
+
+import { Gauge } from '@/components/ui/gauge'
 
 type MovieCardProps = {
 	movie: Movie

@@ -1,10 +1,12 @@
-import { Gauge } from '@/components/ui/gauge'
-import { formatGenres } from '@/helpers/format-genres'
-import type { Crew } from '@/types/cast'
-import type { TvDetails } from '@/types/tv'
 import { format } from 'date-fns'
 import { Dot } from 'lucide-react'
 import Image from 'next/image'
+
+import { formatGenres } from '@/helpers/format-genres'
+import type { Crew } from '@/types/cast'
+import type { TvDetails } from '@/types/tv'
+
+import { Gauge } from '@/components/ui/gauge'
 
 type TvDetailsSectionProps = {
 	data: TvDetails

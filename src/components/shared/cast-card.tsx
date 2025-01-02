@@ -1,6 +1,7 @@
-import type { Cast } from '@/types/cast'
 import { ImageOff } from 'lucide-react'
 import Image from 'next/image'
+
+import type { Cast } from '@/types/cast'
 
 type CastCardProps = {
 	cast: Cast

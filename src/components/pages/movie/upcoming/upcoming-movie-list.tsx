@@ -1,6 +1,7 @@
+import { getUpcomingMovies } from '@/services/movie/get-upcoming-movies'
+
 import { MovieCard } from '@/components/shared/movie-card'
 import { Pagination } from '@/components/shared/pagination'
-import { getUpcomingMovies } from '@/services/movie/get-upcoming-movies'
 
 type UpcomingMovieListProps = {
 	page: number

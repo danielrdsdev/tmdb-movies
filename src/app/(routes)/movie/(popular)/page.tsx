@@ -1,3 +1,6 @@
+import { Link } from 'next-view-transitions'
+import { Suspense } from 'react'
+
 import { PopularMovieList } from '@/components/pages/movie/popular/popular-movie-list'
 import { MovieListSkeleton } from '@/components/shared/movie-list-skeleton'
 import { SectionTitle } from '@/components/shared/section-title'
@@ -9,8 +12,6 @@ import {
 	BreadcrumbPage,
 	BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
-import { Link } from 'next-view-transitions'
-import { Suspense } from 'react'
 
 export const metadata = {
 	title: 'Filmes populares',

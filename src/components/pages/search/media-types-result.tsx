@@ -1,5 +1,6 @@
 import { MEDIA_TYPES_NAMES } from '@/constants/media-type'
 import type { SearchMultiData } from '@/types/search-multi'
+
 import { MediaTypeItem } from './media-type-item'
 
 type MediaTypesResultProps = {

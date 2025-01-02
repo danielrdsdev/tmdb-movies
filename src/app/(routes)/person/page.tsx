@@ -1,3 +1,6 @@
+import { Link } from 'next-view-transitions'
+import { Suspense } from 'react'
+
 import { PersonList } from '@/components/pages/person/person-list'
 import { PersonListSkeleton } from '@/components/pages/person/person-list-skeleton'
 import { SectionTitle } from '@/components/shared/section-title'
@@ -9,8 +12,6 @@ import {
 	BreadcrumbPage,
 	BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
-import { Link } from 'next-view-transitions'
-import { Suspense } from 'react'
 
 export const metadata = {
 	title: 'Pessoas',

@@ -1,6 +1,7 @@
+import { getNowPlayingMovies } from '@/services/movie/get-now-playing-movies'
+
 import { MovieCard } from '@/components/shared/movie-card'
 import { Pagination } from '@/components/shared/pagination'
-import { getNowPlayingMovies } from '@/services/movie/get-now-playing-movies'
 
 type NowPlayingMovieListProps = {
 	page: number

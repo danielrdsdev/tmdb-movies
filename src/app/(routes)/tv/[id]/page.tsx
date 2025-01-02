@@ -1,12 +1,14 @@
-import { AdditionalInformation } from '@/components/pages/tv/id/additional-information'
-import { TvDetailsSection } from '@/components/pages/tv/id/tv-details-section'
-import { CastSection } from '@/components/shared/cast-section'
+import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+
 import { getSeries } from '@/services/tv/get-series'
 import { getTvCredits } from '@/services/tv/get-tv-credits'
 import { getTvDetails } from '@/services/tv/get-tv-details'
 import { siteUrl } from '@/utils/env'
-import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
+
+import { AdditionalInformation } from '@/components/pages/tv/id/additional-information'
+import { TvDetailsSection } from '@/components/pages/tv/id/tv-details-section'
+import { CastSection } from '@/components/shared/cast-section'
 
 export async function generateStaticParams() {
 	const data = await getSeries()

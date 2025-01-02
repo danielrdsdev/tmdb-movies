@@ -1,6 +1,7 @@
+import { Suspense } from 'react'
+
 import { SectionTitle } from '@/components/shared/section-title'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Suspense } from 'react'
 import { MovieListSkeleton } from './movie-list-skeleton'
 import { TrendingTvDay } from './trending-tv-day'
 import { TrendingTvWeek } from './trending-tv-week'

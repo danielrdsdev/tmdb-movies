@@ -1,5 +1,6 @@
-import { Pagination } from '@/components/shared/pagination'
 import { getSearchMulti } from '@/services/search/get-search-multi'
+
+import { Pagination } from '@/components/shared/pagination'
 import { MediaTypesResult } from './media-types-result'
 import { SearchCard } from './search-card'
 

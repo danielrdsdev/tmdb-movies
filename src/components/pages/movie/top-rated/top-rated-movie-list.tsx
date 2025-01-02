@@ -1,6 +1,7 @@
+import { getTopRatedMovies } from '@/services/movie/get-top-rated-movies'
+
 import { MovieCard } from '@/components/shared/movie-card'
 import { Pagination } from '@/components/shared/pagination'
-import { getTopRatedMovies } from '@/services/movie/get-top-rated-movies'
 
 type TopRatedMovieListProps = {
 	page: number

@@ -1,5 +1,6 @@
-import { MovieCard } from '@/components/shared/movie-card'
 import { getPopularMovies } from '@/services/movie/get-popular-movies'
+
+import { MovieCard } from '@/components/shared/movie-card'
 
 export const PopularMoviesList = async () => {
 	const data = await getPopularMovies()

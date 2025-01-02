@@ -1,6 +1,7 @@
+import { getTopRatedTv } from '@/services/tv/get-top-rated-tv'
+
 import { Pagination } from '@/components/shared/pagination'
 import { TvCard } from '@/components/shared/tv-card'
-import { getTopRatedTv } from '@/services/tv/get-top-rated-tv'
 
 type TopRatedTvListProps = {
 	page: number

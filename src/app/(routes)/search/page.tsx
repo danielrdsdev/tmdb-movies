@@ -1,3 +1,7 @@
+import { ArrowLeft } from 'lucide-react'
+import { Link } from 'next-view-transitions'
+import { Suspense } from 'react'
+
 import { SearchList } from '@/components/pages/search/search-list'
 import { SearchListSkeleton } from '@/components/pages/search/search-list-skeleton'
 import { Search } from '@/components/shared/search'
@@ -9,9 +13,6 @@ import {
 	BreadcrumbPage,
 	BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
-import { ArrowLeft } from 'lucide-react'
-import { Link } from 'next-view-transitions'
-import { Suspense } from 'react'
 
 export const metadata = {
 	title: 'Pesquisar filmes',

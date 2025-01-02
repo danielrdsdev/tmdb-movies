@@ -1,6 +1,7 @@
-import type { Person } from '@/types/person'
 import { Link } from 'next-view-transitions'
 import Image from 'next/image'
+
+import type { Person } from '@/types/person'
 
 type PersonCardProps = {
 	person: Person

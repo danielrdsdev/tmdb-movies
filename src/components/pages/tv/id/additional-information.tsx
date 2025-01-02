@@ -1,6 +1,7 @@
-import { InfoCard } from '@/components/shared/info-card'
 import { LANGUAGES } from '@/constants/languages'
 import type { TvDetails } from '@/types/tv'
+
+import { InfoCard } from '@/components/shared/info-card'
 
 type AdditionalInformationProps = {
 	data: TvDetails

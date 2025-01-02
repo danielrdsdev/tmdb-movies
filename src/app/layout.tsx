@@ -1,9 +1,11 @@
-import { Footer } from '@/components/layout/footer'
-import { Header } from '@/components/layout/header'
+import { ViewTransitions } from 'next-view-transitions'
+
 import { siteConfig } from '@/config/site'
 import { anton, inter } from '@/styles/fonts'
 import '@/styles/globals.css'
-import { ViewTransitions } from 'next-view-transitions'
+
+import { Footer } from '@/components/layout/footer'
+import { Header } from '@/components/layout/header'
 
 export const metadata = siteConfig.metadata
 

@@ -1,5 +1,6 @@
-import { SectionTitle } from '@/components/shared/section-title'
 import type { Cast } from '@/types/cast'
+
+import { SectionTitle } from '@/components/shared/section-title'
 import { CastCard } from './cast-card'
 
 type CastSectionProps = {

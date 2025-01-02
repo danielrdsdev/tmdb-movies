@@ -1,5 +1,6 @@
-import { siteUrl } from '@/utils/env'
 import type { Metadata } from 'next'
+
+import { siteUrl } from '@/utils/env'
 
 type SiteConfig = {
 	metadata: Metadata

@@ -1,7 +1,8 @@
+import type { MetadataRoute } from 'next'
+
 import { getMovies } from '@/services/movie/get-movies'
 import { getSeries } from '@/services/tv/get-series'
 import { siteUrl } from '@/utils/env'
-import type { MetadataRoute } from 'next'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 	const [movies, series] = await Promise.all([getMovies(), getSeries()])

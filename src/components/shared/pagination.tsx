@@ -1,12 +1,15 @@
 'use client'
-import { usePagination } from '@/hooks/use-pagination'
+
 import {
 	ChevronLeft,
 	ChevronRight,
 	ChevronsLeft,
 	ChevronsRight,
 } from 'lucide-react'
-import { Button } from '../ui/button'
+
+import { usePagination } from '@/hooks/use-pagination'
+
+import { Button } from '@/components/ui/button'
 
 export const Pagination = ({
 	totalPages,

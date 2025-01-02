@@ -1,6 +1,7 @@
+import { getOnTheAirTv } from '@/services/tv/get-on-the-air-tv'
+
 import { Pagination } from '@/components/shared/pagination'
 import { TvCard } from '@/components/shared/tv-card'
-import { getOnTheAirTv } from '@/services/tv/get-on-the-air-tv'
 
 type OnTheAirTvListProps = {
 	page: number

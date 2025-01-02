@@ -1,5 +1,6 @@
-import { Pagination } from '@/components/shared/pagination'
 import { getPopularPerson } from '@/services/person/get-popular-person'
+
+import { Pagination } from '@/components/shared/pagination'
 import { PersonCard } from './person-card'
 
 type PersonListProps = {

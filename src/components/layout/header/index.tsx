@@ -1,7 +1,9 @@
-import { NavigationMenu } from '@/components/ui/navigation-menu'
-import { siteLinks } from '@/config/links'
 import { Link } from 'next-view-transitions'
+
+import { siteLinks } from '@/config/links'
 import { NavLink } from './nav-link'
+
+import { NavigationMenu } from '@/components/ui/navigation-menu'
 import { SearchDialog } from './search-dialog'
 
 export const Header = () => {

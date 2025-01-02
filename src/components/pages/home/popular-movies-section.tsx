@@ -1,5 +1,6 @@
-import { SectionTitle } from '@/components/shared/section-title'
 import { Suspense } from 'react'
+
+import { SectionTitle } from '@/components/shared/section-title'
 import { MovieListSkeleton } from './movie-list-skeleton'
 import { PopularMoviesList } from './popular-movies-list'
 
